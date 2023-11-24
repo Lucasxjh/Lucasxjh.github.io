@@ -203,11 +203,90 @@
 </ul>
 </li>
 </ol>
-<h3 id="5-3-2操作数寻址方式"><a href="#5-3-2操作数寻址方式" class="headerlink" title="5.3.2操作数寻址方式"></a>5.3.2操作数寻址方式</h3>
+<h3 id="5-3-2操作数寻址方式"><a href="#5-3-2操作数寻址方式" class="headerlink" title="5.3.2操作数寻址方式"></a>5.3.2操作数寻址方式</h3><ol>
+<li><strong>立即数寻址</strong><ul>
+<li>所需的操作数由指令的地址码部分直接给出。</li>
+<li>特点：<ul>
+<li>取指时，操作码和一个操作数同时被取出，减少了访问存储器的次数，提高了指令的执行速度。</li>
+<li><strong>最大优点</strong>便于程序设计(变量赋初值)。</li>
+<li>数据大小受字段数限制。</li>
+<li>不能修改操作数数值。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>寄存器寻址</strong><ul>
+<li>操作数在CPU的内部寄存器中</li>
+<li>特点：<ul>
+<li>操作数在寄存器中，指令执行速度快。</li>
+<li>能访问的数据大小一般与计算机字长有关。该指令的地址码位数只影响能访问的寄存器个数，不影响访问数据的大小。</li>
+<li>地址字段的位数与计算机通用寄存器数量相关。</li>
+<li>缩短指令长度，节省存储空间。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>直接寻址</strong><ul>
+<li>地址码字段直接给出操作数在内存中的地址。</li>
+<li>特点：<ul>
+<li>提供访问主存的操作。</li>
+<li>获得数据要访问主存，指令执行速度慢。</li>
+<li><strong>地址字段的位数决定了访存空间的大小</strong>，因此引入间接寻址。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>间接寻址</strong><ul>
+<li>地址码字段给出的是操作数地址的地址。</li>
+<li>特点：<ul>
+<li><strong>解决了直接寻址方式下地址字段的位数限制访存范围大小的问题</strong>。</li>
+<li>获得数据要访问主存2次，指令执行速度太慢。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>寄存器简介寻址</strong><ul>
+<li>地址码字段给出的是寄存器编号。(先访问地址码字段给出的寄存器，在寄存器中获得操作数在主存中的位置)</li>
+<li>特点：<ul>
+<li>解决了直接寻址方式下地址字段的位数限制访存范围大小的问题。</li>
+<li>获得数据只需访问主存一次。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>相对寻址</strong><ul>
+<li>将程序计数器PC的内容与指令的地址码部分给出的位移量(Disp)之和作为操作数的地址或转移地址。</li>
+<li>特点：<ul>
+<li>可节省指令中的地址位数，便于程序在内存中成块移动。</li>
+<li><strong>注意</strong>：<strong>PC的改变对计算的影响</strong>(回顾5.3.1 1.顺序寻址)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>基址寻址</strong><ul>
+<li>在计算机中设置一个专用的基址寄存器，或由指令指定一个通用寄存器为基址寄存器。操作数地址由基址寄存器的内容和指令的地址码A相加得到。地址码A通常被称为位移量。</li>
+<li>特点：<ul>
+<li>使用基址寄存器可以访问更大的主存空间。</li>
+<li>对某一程序而言，基址值设定后不变，故要访问不同数据需修改指令中地址码字段。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>变址寻址</strong><ul>
+<li>指定一个变址寄存器，与本地指令地址无关，内容可随要求改变。</li>
+<li>特点：<ul>
+<li>不改变指令即可改变数据的有效地址，可在循环中使用。</li>
+<li>在字符串处理，向量运算等等成批数据处理中非常有用。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" data-id="clpckif0g00094wf5drho3l9g" data-title="第五章 指令系统 知识点" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" data-id="clpcnd8m2000ecsf52odx324g" data-title="第五章 指令系统 知识点" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -377,7 +456,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/24/markdown/" data-id="clpckif0d00064wf5fppk6dqg" data-title="markdown" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/24/markdown/" data-id="clpcnd8lt0004csf5h4s84d3b" data-title="markdown" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -419,7 +498,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/24/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-id="clpckif0b00054wf5ek7mhtuv" data-title="第三章 处理机调度与死锁" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/24/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-id="clpcnd8lv0006csf52ym3e6n8" data-title="第三章 处理机调度与死锁" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -473,7 +552,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/23/%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8hexo/" data-id="clpckif0f00084wf57o8x1n9s" data-title="怎么使用hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/23/%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8hexo/" data-id="clpcnd8lu0005csf5fu8kc4gc" data-title="怎么使用hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -516,7 +595,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/23/2023-11-23/" data-id="clpckiezz00014wf54nzq1inx" data-title="2023.11.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/23/2023-11-23/" data-id="clpcnd8lo0001csf51pergddk" data-title="2023.11.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -567,7 +646,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/23/hello-world/" data-id="clpckif0a00044wf53chf06zw" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/23/hello-world/" data-id="clpcnd8lq0002csf5hf6ebbtf" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
