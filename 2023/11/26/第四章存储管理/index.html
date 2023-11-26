@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>第四章存储管理 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="(只列举相关的知识点，定义啥的，以后再来补充)引入：存储管理是计算机系统的重要组成部分，用于存储包括程序和数据在内的各种信息，亦属于非常重要的系统资源。 4.1程序的链接和接入引入：要使源程序能够运行，必须经过：编译、链接和装入 4.1.1逻辑地址、物理地址和虚拟地址 逻辑地址(相对地址) 逻辑地址空间 物理地址 物理地址空间 虚拟地址空间和虚拟地址  4.1.2程序链接链接程序在将几个模块装配成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第四章存储管理">
+<meta property="og:url" content="http://example.com/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="(只列举相关的知识点，定义啥的，以后再来补充)引入：存储管理是计算机系统的重要组成部分，用于存储包括程序和数据在内的各种信息，亦属于非常重要的系统资源。 4.1程序的链接和接入引入：要使源程序能够运行，必须经过：编译、链接和装入 4.1.1逻辑地址、物理地址和虚拟地址 逻辑地址(相对地址) 逻辑地址空间 物理地址 物理地址空间 虚拟地址空间和虚拟地址  4.1.2程序链接链接程序在将几个模块装配成">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-26T08:53:23.000Z">
+<meta property="article:modified_time" content="2023-11-26T09:40:30.941Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-第四章存储管理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/" class="article-date">
+  <time class="dt-published" datetime="2023-11-26T08:53:23.000Z" itemprop="datePublished">2023-11-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      第四章存储管理
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>(<em><strong>只列举相关的知识点，定义啥的，以后再来补充</strong></em>)<br>引入：存储管理是计算机系统的重要组成部分，用于存储包括程序和数据在内的各种信息，亦属于非常重要的系统资源。</p>
+<h2 id="4-1程序的链接和接入"><a href="#4-1程序的链接和接入" class="headerlink" title="4.1程序的链接和接入"></a>4.1程序的链接和接入</h2><p>引入：要使源程序能够运行，必须经过：<strong>编译</strong>、<strong>链接</strong>和<strong>装入</strong></p>
+<h3 id="4-1-1逻辑地址、物理地址和虚拟地址"><a href="#4-1-1逻辑地址、物理地址和虚拟地址" class="headerlink" title="4.1.1逻辑地址、物理地址和虚拟地址"></a>4.1.1逻辑地址、物理地址和虚拟地址</h3><ol>
+<li>逻辑地址(相对地址)</li>
+<li>逻辑地址空间</li>
+<li>物理地址</li>
+<li>物理地址空间</li>
+<li>虚拟地址空间和虚拟地址</li>
+</ol>
+<h3 id="4-1-2程序链接"><a href="#4-1-2程序链接" class="headerlink" title="4.1.2程序链接"></a>4.1.2程序链接</h3><p>链接程序在将几个模块装配成一个装入模块时，需解决以下问题：</p>
+<ol>
+<li>修改模块的相对地址</li>
+<li>变换外部调用符号</li>
+</ol>
+<p>根据对目标模块的链接时间不同进行分类：</p>
+<ol>
+<li>静态链接</li>
+<li>装入时动态链接</li>
+<li>运行时动态链接</li>
+</ol>
+<h3 id="4-1-3程序装入"><a href="#4-1-3程序装入" class="headerlink" title="4.1.3程序装入"></a>4.1.3程序装入</h3><p>装入后，要实行地址转换操作(被称为：地址映射、地址变换或重定位)<br>根据地址变换的时间进行分类：</p>
+<ol>
+<li>静态重定位</li>
+<li>动态重定位</li>
+</ol>
+<h2 id="4-2分区式存储管理"><a href="#4-2分区式存储管理" class="headerlink" title="4.2分区式存储管理"></a>4.2分区式存储管理</h2><p>对内存采用连续分配方式</p>
+<h3 id="4-2-1单一连续分区存储管理"><a href="#4-2-1单一连续分区存储管理" class="headerlink" title="4.2.1单一连续分区存储管理"></a>4.2.1单一连续分区存储管理</h3><ol>
+<li>实现原理<ul>
+<li>内存空间被分为系统区和用户区</li>
+<li>仅适合单用户单任务操作系统</li>
+</ul>
+</li>
+<li>分配与释放</li>
+<li>地址映射<ul>
+<li>静态重定位</li>
+</ul>
+</li>
+<li>单一连续分区的优缺点<ul>
+<li>优点：<ol>
+<li>不需要硬件支持</li>
+<li>管理简单，开销小，装入内存的程序仅由分配程序参与管理</li>
+<li>安全性高，除了系统区以外，用户区仅有一个程序，不存在多个程序相互影响的问题</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>程序的地址空间受用户区地址空间的限制</li>
+<li>由一个程序独占系统资源，会造成系统资源的严重浪费</li>
+<li>不支持多用户</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-2-2固定分区存储管理"><a href="#4-2-2固定分区存储管理" class="headerlink" title="4.2.2固定分区存储管理"></a>4.2.2固定分区存储管理</h3><ol>
+<li>实现原理<ul>
+<li>将内存用户空间划分为若干个固定大小的区域，每个区域称为一个分区，可以装入一个用户程序运行，<strong>分区一旦划分完成，便在整个运行期间保持不变</strong>。</li>
+</ul>
+</li>
+<li>分区划分<ul>
+<li>分区大小相等</li>
+<li>分区大小不想等</li>
+</ul>
+</li>
+<li>数据结构</li>
+<li>分配与释放</li>
+<li>地址映射<ul>
+<li>静态重定位</li>
+</ul>
+</li>
+<li>固定分区分配的优缺点<ul>
+<li>优点：简单易行、CPU利用率较高</li>
+<li>缺点：程序大小受分区大小的限制、存储空间存在浪费</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-2-3可变分区存储管理"><a href="#4-2-3可变分区存储管理" class="headerlink" title="4.2.3可变分区存储管理"></a>4.2.3可变分区存储管理</h3><ol>
+<li>实现原理<ul>
+<li>内存分区在程序运行时根据程序对内存空间的需要而动态建立，分区的划分时间、大小及位置都是动态的。</li>
+</ul>
+</li>
+<li>数据结构<ul>
+<li>通常使用的数据结构包括：已使用分区表、空闲区表以及空闲分区链</li>
+</ul>
+</li>
+<li>分配算法<ul>
+<li>最先适应算法<ul>
+<li>循环最先适应算法</li>
+</ul>
+</li>
+<li>最佳适应算法</li>
+<li>最差适应算法</li>
+</ul>
+</li>
+<li>分配与回收<ul>
+<li>考虑对相邻的空闲分区进行合并</li>
+</ul>
+</li>
+<li>地址映射<ul>
+<li>动态重定位</li>
+</ul>
+</li>
+<li>碎片问题<ul>
+<li>“紧凑”技术</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-2-4覆盖与交换技术"><a href="#4-2-4覆盖与交换技术" class="headerlink" title="4.2.4覆盖与交换技术"></a>4.2.4覆盖与交换技术</h3><ol>
+<li>覆盖技术<ul>
+<li>定义：</li>
+</ul>
+</li>
+<li>交换技术<ul>
+<li>定义：</li>
+<li>按交换单位进行分类<ul>
+<li>进程交换(进程对换、整体交换和整体对换)</li>
+<li>页面交换(页面置换和页面对换)</li>
+</ul>
+</li>
+<li>需解决的问题：<ul>
+<li>对换空间的管理</li>
+<li>交换时机和选择哪些进程交换</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-3分页式存储管理"><a href="#4-3分页式存储管理" class="headerlink" title="4.3分页式存储管理"></a>4.3分页式存储管理</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/" data-id="clpfaibsz000gkkf585p0f2vl" data-title="第四章存储管理" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">第六章中央处理器</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/">第四章存储管理</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/">第六章中央处理器</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/25/2023-11-25/">2023.11.25</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/24/2023-11-24/">2023.11.24</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/">第五章 指令系统 知识点</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

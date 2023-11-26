@@ -6,15 +6,15 @@
   
   <title>第六章中央处理器 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="6.1CPU的组成与功能1.CPU概述计算机硬件体系架构遵循冯诺依曼计算机的基本原理  冯诺依曼计算机的主要功能部件 运算器、控制器、存储器、输入和输出设备。   冯诺依曼计算机的主要工作原理 存储程序和程序控制。    CPU的功能：  取指令并执行指令的部件  2.CPU基本组成 运算器 功能：数据加工 组成：状态寄存器、ALU和通用寄存器   控制器 取指令(Mem[PC++]-&gt;IR">
+  <meta name="description" content="6.1CPU的组成与功能1.CPU概述计算机硬件体系架构遵循冯诺依曼计算机的基本原理  冯诺依曼计算机的主要功能部件 运算器、控制器、存储器、输入和输出设备。   冯诺依曼计算机的主要工作原理 存储程序和程序控制。    2.CPU基本组成从整体来看可分为如下几部分：  控制单元(Control Unit)：用于产生各种控制信号 算术逻辑单元(ALU)：算术和逻辑运算 寄存器(Registers)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第六章中央处理器">
 <meta property="og:url" content="http://example.com/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="6.1CPU的组成与功能1.CPU概述计算机硬件体系架构遵循冯诺依曼计算机的基本原理  冯诺依曼计算机的主要功能部件 运算器、控制器、存储器、输入和输出设备。   冯诺依曼计算机的主要工作原理 存储程序和程序控制。    CPU的功能：  取指令并执行指令的部件  2.CPU基本组成 运算器 功能：数据加工 组成：状态寄存器、ALU和通用寄存器   控制器 取指令(Mem[PC++]-&gt;IR">
+<meta property="og:description" content="6.1CPU的组成与功能1.CPU概述计算机硬件体系架构遵循冯诺依曼计算机的基本原理  冯诺依曼计算机的主要功能部件 运算器、控制器、存储器、输入和输出设备。   冯诺依曼计算机的主要工作原理 存储程序和程序控制。    2.CPU基本组成从整体来看可分为如下几部分：  控制单元(Control Unit)：用于产生各种控制信号 算术逻辑单元(ALU)：算术和逻辑运算 寄存器(Registers)">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-11-26T03:08:02.000Z">
-<meta property="article:modified_time" content="2023-11-26T03:49:12.878Z">
+<meta property="article:modified_time" content="2023-11-26T08:44:13.120Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -112,40 +112,98 @@
 </ul>
 </li>
 </ul>
-<p>CPU的功能：</p>
+<h3 id="2-CPU基本组成"><a href="#2-CPU基本组成" class="headerlink" title="2.CPU基本组成"></a>2.CPU基本组成</h3><p>从整体来看可分为如下几部分：</p>
+<ol>
+<li><strong>控制单元</strong>(Control Unit)：用于产生各种控制信号</li>
+<li><strong>算术逻辑单元</strong>(ALU)：算术和逻辑运算</li>
+<li><strong>寄存器</strong>(Registers)：用来存放取出的指令和数据等信息</li>
+<li><strong>寄存器文件</strong>(Registers File)：一组寄存器的集合，用于存储各种类型的数据。通常包含通用寄存器、专用寄存器等</li>
+<li><strong>时钟和控制电路</strong>：<strong>CPU中的关键元素</strong>，用于同步各个部件的操作。</li>
+<li><strong>数据通路</strong>(Data Bus)<strong>和地址总线</strong>(Address Bus)：数据通路负责在各个部件之间传输数据，而地址总线则用于指示内存中的特定位置。两者协同巩工作，使得指令和数据能够在CPU内部和外部存储器之间传递。</li>
+<li><strong>中断系统</strong>(Interrupt System)：用于处理异常情况和特殊请求。</li>
+</ol>
+<p>若把CPU分为<strong>运算器</strong>和<strong>控制器</strong>两部分来看：</p>
 <ul>
-<li>取指令并执行指令的部件</li>
-</ul>
-<h3 id="2-CPU基本组成"><a href="#2-CPU基本组成" class="headerlink" title="2.CPU基本组成"></a>2.CPU基本组成</h3><ul>
-<li>运算器<ul>
-<li>功能：数据加工</li>
-<li>组成：状态寄存器、ALU和通用寄存器</li>
+<li>运算器：逻辑门、算术电路、寄存器、选择器和控制信号生成逻辑</li>
+<li>控制器：<ol>
+<li>指令部件：从内存中取出指令并对指令操作码进行译码<ul>
+<li>程序计数器：存放将要执行的指令的地址</li>
+<li>指令寄存器：存放正在执行的指令</li>
+<li>指令译码器：对暂存在指令寄存器IR中的指令的操作码进行译码</li>
+<li>地址形成部件：根据指令的不同寻址方式，形成操作数的有效地址</li>
 </ul>
 </li>
-<li>控制器<ul>
-<li>取指令(<strong>Mem[PC++]-&gt;IR</strong>：回顾5.3.1)</li>
-<li>程序执行&#x2F;指令执行<ol>
-<li>指令字-&gt;控制信号序列</li>
-<li>信号序列-&gt;数据通路</li>
+<li>时序部件：产生一定的时序信号以保证机器的各个功能部件有节奏的进行信息传送、加工和信息存储<ul>
+<li>脉冲源：用来产生具有一定频率和宽度的时钟脉冲信号为整个机器提供基准信号</li>
+<li>启停控制逻辑：根据计算机的需要，可靠的开放或封锁脉冲，控制时序信号的发生或停止</li>
+<li>节拍信号发生器：也叫脉冲分配器，产生各个机器周期中的节拍信号</li>
+</ul>
+</li>
+<li>微操作信号发生器(操作控制器)：根据指令操作码的译码和时序信号，产生各种微操作控制信号<ul>
+<li>根据指令的操纵码的译码和时序信号，产生各种微操作控制信号，以便正确地选择数据通路，把有关数据打入到一个寄存器，从而完成取指令和执行指令的控制</li>
+</ul>
+</li>
+<li>中断控制逻辑：用来控制中断的硬件逻辑<ul>
+<li>用来控制中断的硬件逻辑</li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
+<h3 id="3-CPU主要功能"><a href="#3-CPU主要功能" class="headerlink" title="3.CPU主要功能"></a>3.CPU主要功能</h3><p>从CPU整体来看：</p>
+<ul>
+<li><p>CPU的任务</p>
+<ul>
+<li><strong>取指令</strong>：CPU必须从存储器(寄存器、cache、主存)读取指令。(<strong>Mem[PC++]-&gt;IR</strong>：回顾5.3.1)</li>
+<li><strong>分析指令</strong>：必须对指令进行译码，以确定所要求的动作。</li>
+<li><strong>取操作数</strong>：根据指令的地址码字段到存储器、寄存器或是I&#x2F;O设备中读取指令</li>
+<li><strong>执行指令</strong>：对取出的操作数执行指令所规定的操作，并把执行结果写入存储器、寄存器或I&#x2F;O设备中。<ul>
+<li>指令字-&gt;控制信号序列</li>
+<li>信号序列-&gt;数据通路</li>
+</ul>
 </li>
 </ul>
-<h3 id="3-CPU主要功能"><a href="#3-CPU主要功能" class="headerlink" title="3.CPU主要功能"></a>3.CPU主要功能</h3><ul>
+</li>
+<li><p>CPU的功能</p>
+<ul>
+<li><strong>指令控制</strong>：保证机器按规定的顺序执行命令。</li>
+<li><strong>操作控制</strong>：一条指令的功能往往由若干个操作的组合来实现的，因此CPU须管理这些操作，并产生完成这些操作所需的控制信号。</li>
+<li><strong>时间控制</strong>：对各种操作实施时间上的控制。</li>
+<li><strong>数据加工</strong>(<strong>CPU的根本任务</strong>)：对数据进行算术运算和逻辑运算处理。</li>
+</ul>
+</li>
+</ul>
+<p>从<strong>运算器</strong>和<strong>控制器</strong>两部分来看：</p>
+<ul>
 <li>运算器：<ul>
 <li>数据加工：算术&#x2F;逻辑运算</li>
 </ul>
 </li>
 <li>控制器：<ul>
 <li>程序控制：程序中执行指令顺序控制</li>
-<li>操作控制：将机器指令翻译成执行部件所需的操作控制信号</li>
+<li>操作控制：将机器指令翻译成执行部件所需的操作控制信号(控制CPU内数据通路传送的部件)</li>
 <li>时序控制：控制操作信号的产生时间、持续时间</li>
 <li>异常控制：异常处理，外设交互</li>
 </ul>
 </li>
 </ul>
-<h3 id="4-主要寄存器"><a href="#4-主要寄存器" class="headerlink" title="4.主要寄存器"></a>4.主要寄存器</h3><ul>
+<h3 id="4-CPU中的寄存器"><a href="#4-CPU中的寄存器" class="headerlink" title="4.CPU中的寄存器"></a>4.CPU中的寄存器</h3><ol>
+<li>用户可见寄存器：允许机器语言或汇编语言的编程人员访问的寄存器。<ul>
+<li>通用寄存器：可由程序员指定其功能，可以用来存放操作数或地址。</li>
+<li>数据寄存器：仅可用于保存数据而不能用于操作数地址的运算。</li>
+<li>地址寄存器：用于存放地址，也可用于特殊的寻址方式。</li>
+<li>标志寄存器：用于保存状态标志。</li>
+</ul>
+</li>
+<li>控制和状态寄存器：对用户透明，由控制器直接控制的寄存器<ul>
+<li>程序计数器(PC)：存放下一条要待取指令在内存中的地址</li>
+<li>指令寄存器(IR)：用来存放当前正在执行的指令</li>
+<li>存储器地址寄存器(MAR)：用来存放将被访问的内存单元的地址</li>
+<li>存储器数据寄存器(MDR)：用来存放将要存入存储器中的数据，或是从存储器读出的数据</li>
+<li>程序状态字寄存器(PSW)：用来存放条件码和其它状态信息</li>
+</ul>
+</li>
+<li>主要寄存器<ul>
 <li>PC(Program Counter)程序计数器，必选</li>
 <li>IR(Instruction Register)指令寄存器，可选</li>
 <li>AR(Address Register)地址寄存器，可选</li>
@@ -153,16 +211,43 @@
 <li>AC(Accumulate Count)累加寄存器，可选</li>
 <li>PSW(Program Status Word)程序状态字，可选</li>
 </ul>
+</li>
+</ol>
 <h3 id="5-操作控制器"><a href="#5-操作控制器" class="headerlink" title="5.操作控制器"></a>5.操作控制器</h3><p>功能：取指令，将机器指令译码并生成执行部件控制信号序列，建立正确的数据通路，从而完成指令的正确执行。</p>
 <ul>
-<li>硬布线控制器 (时序逻辑型) (硬件实现) (实现较为复杂，从而推出微程序控制器)</li>
-<li>微程序控制器 (存储程序型) (软件实现)</li>
+<li>硬布线控制器 (时序逻辑型) (硬件实现) (实现较为复杂，从而推出微程序控制器)<ul>
+<li>采用组合逻辑技术来实现，其控制单元由门电路组成的复杂树形网络</li>
 </ul>
+</li>
+<li>微程序控制器 (存储程序型) (软件实现)<ul>
+<li>采用存储逻辑实现。将微操作代码化，使每一条机器指令转化成为一段微程序并存入一个专门的存储器中，其中的微操作控制信号是由微指令产生</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-2数据通路"><a href="#6-2数据通路" class="headerlink" title="6.2数据通路"></a>6.2数据通路</h2><p>(<em><strong>还没太搞清楚，只列举了一些知识点</strong></em>)</p>
+<h3 id="1-数据通路基本概念"><a href="#1-数据通路基本概念" class="headerlink" title="1.数据通路基本概念"></a>1.数据通路基本概念</h3><p><strong>数据通路</strong>：执行部件间传送信息的路径。</p>
+<ul>
+<li>通路的建立由<strong>控制信号</strong>控制，受<strong>时钟驱动</strong>。</li>
+<li>不同指令、同一指令在执行的不同阶段的数据通路不同。</li>
+<li>数据通路分类：共享通路(总线)、专用通路。<ul>
+<li>不同的数据通路对<strong>指令执行流程</strong>、<strong>执行效率</strong>以及<strong>微操作控制信号的时序安排</strong>有较大的影响。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-数据通路抽象模型"><a href="#2-数据通路抽象模型" class="headerlink" title="2.数据通路抽象模型"></a>2.数据通路抽象模型</h3><p>(唔，得搁置一段时间)</p>
+<h3 id="3-D触发器定时模型"><a href="#3-D触发器定时模型" class="headerlink" title="3.D触发器定时模型"></a>3.D触发器定时模型</h3><p>(图片得搁置一段时间再补回来)<br>数据的定时间：</p>
+<ul>
+<li>时钟触发前输入须稳定一段<strong>建立时间</strong>(Setup Time)</li>
+<li>时钟触发后输入须稳定一段<strong>保持时间</strong>(Hold Time)</li>
+<li>时钟触发到输出稳定的时间<strong>触发器延迟</strong>(Clk_to_Q)</li>
+</ul>
+<h3 id="4-数据通路与时钟周期"><a href="#4-数据通路与时钟周期" class="headerlink" title="4.数据通路与时钟周期"></a>4.数据通路与时钟周期</h3><p>(后续补图)</p>
+<h3 id="5-保持时间违例"><a href="#5-保持时间违例" class="headerlink" title="5.保持时间违例"></a>5.保持时间违例</h3><p>(后续补图)</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" data-id="clpeyssen000nmgf5g08kfvch" data-title="第六章中央处理器" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" data-id="clpfaibsy000dkkf5798q298c" data-title="第六章中央处理器" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -171,6 +256,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          第四章存储管理
+        
+      </div>
+    </a>
   
   
     <a href="/2023/11/25/2023-11-25/" id="article-nav-older" class="article-nav-link-wrap">
@@ -220,6 +314,10 @@
       <ul>
         
           <li>
+            <a href="/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/">第四章存储管理</a>
+          </li>
+        
+          <li>
             <a href="/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/">第六章中央处理器</a>
           </li>
         
@@ -233,10 +331,6 @@
         
           <li>
             <a href="/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/">第五章 指令系统 知识点</a>
-          </li>
-        
-          <li>
-            <a href="/2023/11/24/markdown/">markdown</a>
           </li>
         
       </ul>
