@@ -1,1265 +1,887 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="twitter:card" content="summary_large_image">
   
   
-    <link rel="shortcut icon" href="/favicon.png">
   
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+  <title>Hexo</title>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
   
 <meta name="generator" content="Hexo 7.0.0"></head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-          <a class="main-nav-link" href="/">Home</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
         
-      </nav>
-      <nav id="sub-nav">
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
         
         
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-第四章存储管理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/" class="article-date">
-  <time class="dt-published" datetime="2023-11-26T08:53:23.000Z" itemprop="datePublished">2023-11-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/">第四章存储管理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>(<em><strong>只列举相关的知识点，定义啥的，以后再来补充</strong></em>)<br>引入：存储管理是计算机系统的重要组成部分，用于存储包括程序和数据在内的各种信息，亦属于非常重要的系统资源。</p>
-<h2 id="4-1程序的链接和接入"><a href="#4-1程序的链接和接入" class="headerlink" title="4.1程序的链接和接入"></a>4.1程序的链接和接入</h2><p>引入：要使源程序能够运行，必须经过：<strong>编译</strong>、<strong>链接</strong>和<strong>装入</strong></p>
-<h3 id="4-1-1逻辑地址、物理地址和虚拟地址"><a href="#4-1-1逻辑地址、物理地址和虚拟地址" class="headerlink" title="4.1.1逻辑地址、物理地址和虚拟地址"></a>4.1.1逻辑地址、物理地址和虚拟地址</h3><ol>
-<li>逻辑地址(相对地址)</li>
-<li>逻辑地址空间</li>
-<li>物理地址</li>
-<li>物理地址空间</li>
-<li>虚拟地址空间和虚拟地址</li>
-</ol>
-<h3 id="4-1-2程序链接"><a href="#4-1-2程序链接" class="headerlink" title="4.1.2程序链接"></a>4.1.2程序链接</h3><p>链接程序在将几个模块装配成一个装入模块时，需解决以下问题：</p>
-<ol>
-<li>修改模块的相对地址</li>
-<li>变换外部调用符号</li>
-</ol>
-<p>根据对目标模块的链接时间不同进行分类：</p>
-<ol>
-<li>静态链接</li>
-<li>装入时动态链接</li>
-<li>运行时动态链接</li>
-</ol>
-<h3 id="4-1-3程序装入"><a href="#4-1-3程序装入" class="headerlink" title="4.1.3程序装入"></a>4.1.3程序装入</h3><p>装入后，要实行地址转换操作(被称为：地址映射、地址变换或重定位)<br>根据地址变换的时间进行分类：</p>
-<ol>
-<li>静态重定位</li>
-<li>动态重定位</li>
-</ol>
-<h2 id="4-2分区式存储管理"><a href="#4-2分区式存储管理" class="headerlink" title="4.2分区式存储管理"></a>4.2分区式存储管理</h2><p>对内存采用连续分配方式</p>
-<h3 id="4-2-1单一连续分区存储管理"><a href="#4-2-1单一连续分区存储管理" class="headerlink" title="4.2.1单一连续分区存储管理"></a>4.2.1单一连续分区存储管理</h3><ol>
-<li>实现原理<ul>
-<li>内存空间被分为系统区和用户区</li>
-<li>仅适合单用户单任务操作系统</li>
-</ul>
-</li>
-<li>分配与释放</li>
-<li>地址映射<ul>
-<li>静态重定位</li>
-</ul>
-</li>
-<li>单一连续分区的优缺点<ul>
-<li>优点：<ol>
-<li>不需要硬件支持</li>
-<li>管理简单，开销小，装入内存的程序仅由分配程序参与管理</li>
-<li>安全性高，除了系统区以外，用户区仅有一个程序，不存在多个程序相互影响的问题</li>
-</ol>
-</li>
-<li>缺点：<ol>
-<li>程序的地址空间受用户区地址空间的限制</li>
-<li>由一个程序独占系统资源，会造成系统资源的严重浪费</li>
-<li>不支持多用户</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="4-2-2固定分区存储管理"><a href="#4-2-2固定分区存储管理" class="headerlink" title="4.2.2固定分区存储管理"></a>4.2.2固定分区存储管理</h3><ol>
-<li>实现原理<ul>
-<li>将内存用户空间划分为若干个固定大小的区域，每个区域称为一个分区，可以装入一个用户程序运行，<strong>分区一旦划分完成，便在整个运行期间保持不变</strong>。</li>
-</ul>
-</li>
-<li>分区划分<ul>
-<li>分区大小相等</li>
-<li>分区大小不想等</li>
-</ul>
-</li>
-<li>数据结构</li>
-<li>分配与释放</li>
-<li>地址映射<ul>
-<li>静态重定位</li>
-</ul>
-</li>
-<li>固定分区分配的优缺点<ul>
-<li>优点：简单易行、CPU利用率较高</li>
-<li>缺点：程序大小受分区大小的限制、存储空间存在浪费</li>
-</ul>
-</li>
-</ol>
-<h3 id="4-2-3可变分区存储管理"><a href="#4-2-3可变分区存储管理" class="headerlink" title="4.2.3可变分区存储管理"></a>4.2.3可变分区存储管理</h3><ol>
-<li>实现原理<ul>
-<li>内存分区在程序运行时根据程序对内存空间的需要而动态建立，分区的划分时间、大小及位置都是动态的。</li>
-</ul>
-</li>
-<li>数据结构<ul>
-<li>通常使用的数据结构包括：已使用分区表、空闲区表以及空闲分区链</li>
-</ul>
-</li>
-<li>分配算法<ul>
-<li>最先适应算法<ul>
-<li>循环最先适应算法</li>
-</ul>
-</li>
-<li>最佳适应算法</li>
-<li>最差适应算法</li>
-</ul>
-</li>
-<li>分配与回收<ul>
-<li>考虑对相邻的空闲分区进行合并</li>
-</ul>
-</li>
-<li>地址映射<ul>
-<li>动态重定位</li>
-</ul>
-</li>
-<li>碎片问题<ul>
-<li>“紧凑”技术</li>
-</ul>
-</li>
-</ol>
-<h3 id="4-2-4覆盖与交换技术"><a href="#4-2-4覆盖与交换技术" class="headerlink" title="4.2.4覆盖与交换技术"></a>4.2.4覆盖与交换技术</h3><ol>
-<li>覆盖技术<ul>
-<li>定义：</li>
-</ul>
-</li>
-<li>交换技术<ul>
-<li>定义：</li>
-<li>按交换单位进行分类<ul>
-<li>进程交换(进程对换、整体交换和整体对换)</li>
-<li>页面交换(页面置换和页面对换)</li>
-</ul>
-</li>
-<li>需解决的问题：<ul>
-<li>对换空间的管理</li>
-<li>交换时机和选择哪些进程交换</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="4-3分页式存储管理"><a href="#4-3分页式存储管理" class="headerlink" title="4.3分页式存储管理"></a>4.3分页式存储管理</h2><p>离散式分配方式，以页为基本单位</p>
-<h3 id="4-3-1分页式存储管理概述"><a href="#4-3-1分页式存储管理概述" class="headerlink" title="4.3.1分页式存储管理概述"></a>4.3.1分页式存储管理概述</h3><ol>
-<li>实现原理</li>
-<li>逻辑地址结构</li>
-<li>数据结构<ul>
-<li>页表</li>
-<li>内存空间使用表</li>
-</ul>
-</li>
-</ol>
-<h3 id="4-3-2分页式存储管理的地址变换机构"><a href="#4-3-2分页式存储管理的地址变换机构" class="headerlink" title="4.3.2分页式存储管理的地址变换机构"></a>4.3.2分页式存储管理的地址变换机构</h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/" data-id="clpfcrd1r000gx0f53p196kxr" data-title="第四章存储管理" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-第六章中央处理器" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" class="article-date">
-  <time class="dt-published" datetime="2023-11-26T03:08:02.000Z" itemprop="datePublished">2023-11-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/">第六章中央处理器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="6-1CPU的组成与功能"><a href="#6-1CPU的组成与功能" class="headerlink" title="6.1CPU的组成与功能"></a>6.1CPU的组成与功能</h2><h3 id="1-CPU概述"><a href="#1-CPU概述" class="headerlink" title="1.CPU概述"></a>1.CPU概述</h3><p>计算机硬件体系架构遵循<strong>冯诺依曼计算机的基本原理</strong></p>
-<ul>
-<li>冯诺依曼计算机的主要功能部件<ul>
-<li>运算器、控制器、存储器、输入和输出设备。</li>
-</ul>
-</li>
-<li>冯诺依曼计算机的主要工作原理<ul>
-<li>存储程序和程序控制。</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-CPU基本组成"><a href="#2-CPU基本组成" class="headerlink" title="2.CPU基本组成"></a>2.CPU基本组成</h3><p>从整体来看可分为如下几部分：</p>
-<ol>
-<li><strong>控制单元</strong>(Control Unit)：用于产生各种控制信号</li>
-<li><strong>算术逻辑单元</strong>(ALU)：算术和逻辑运算</li>
-<li><strong>寄存器</strong>(Registers)：用来存放取出的指令和数据等信息</li>
-<li><strong>寄存器文件</strong>(Registers File)：一组寄存器的集合，用于存储各种类型的数据。通常包含通用寄存器、专用寄存器等</li>
-<li><strong>时钟和控制电路</strong>：<strong>CPU中的关键元素</strong>，用于同步各个部件的操作。</li>
-<li><strong>数据通路</strong>(Data Bus)<strong>和地址总线</strong>(Address Bus)：数据通路负责在各个部件之间传输数据，而地址总线则用于指示内存中的特定位置。两者协同巩工作，使得指令和数据能够在CPU内部和外部存储器之间传递。</li>
-<li><strong>中断系统</strong>(Interrupt System)：用于处理异常情况和特殊请求。</li>
-</ol>
-<p>若把CPU分为<strong>运算器</strong>和<strong>控制器</strong>两部分来看：</p>
-<ul>
-<li>运算器：逻辑门、算术电路、寄存器、选择器和控制信号生成逻辑</li>
-<li>控制器：<ol>
-<li>指令部件：从内存中取出指令并对指令操作码进行译码<ul>
-<li>程序计数器：存放将要执行的指令的地址</li>
-<li>指令寄存器：存放正在执行的指令</li>
-<li>指令译码器：对暂存在指令寄存器IR中的指令的操作码进行译码</li>
-<li>地址形成部件：根据指令的不同寻址方式，形成操作数的有效地址</li>
-</ul>
-</li>
-<li>时序部件：产生一定的时序信号以保证机器的各个功能部件有节奏的进行信息传送、加工和信息存储<ul>
-<li>脉冲源：用来产生具有一定频率和宽度的时钟脉冲信号为整个机器提供基准信号</li>
-<li>启停控制逻辑：根据计算机的需要，可靠的开放或封锁脉冲，控制时序信号的发生或停止</li>
-<li>节拍信号发生器：也叫脉冲分配器，产生各个机器周期中的节拍信号</li>
-</ul>
-</li>
-<li>微操作信号发生器(操作控制器)：根据指令操作码的译码和时序信号，产生各种微操作控制信号<ul>
-<li>根据指令的操纵码的译码和时序信号，产生各种微操作控制信号，以便正确地选择数据通路，把有关数据打入到一个寄存器，从而完成取指令和执行指令的控制</li>
-</ul>
-</li>
-<li>中断控制逻辑：用来控制中断的硬件逻辑<ul>
-<li>用来控制中断的硬件逻辑</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<h3 id="3-CPU主要功能"><a href="#3-CPU主要功能" class="headerlink" title="3.CPU主要功能"></a>3.CPU主要功能</h3><p>从CPU整体来看：</p>
-<ul>
-<li><p>CPU的任务</p>
-<ul>
-<li><strong>取指令</strong>：CPU必须从存储器(寄存器、cache、主存)读取指令。(<strong>Mem[PC++]-&gt;IR</strong>：回顾5.3.1)</li>
-<li><strong>分析指令</strong>：必须对指令进行译码，以确定所要求的动作。</li>
-<li><strong>取操作数</strong>：根据指令的地址码字段到存储器、寄存器或是I&#x2F;O设备中读取指令</li>
-<li><strong>执行指令</strong>：对取出的操作数执行指令所规定的操作，并把执行结果写入存储器、寄存器或I&#x2F;O设备中。<ul>
-<li>指令字-&gt;控制信号序列</li>
-<li>信号序列-&gt;数据通路</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>CPU的功能</p>
-<ul>
-<li><strong>指令控制</strong>：保证机器按规定的顺序执行命令。</li>
-<li><strong>操作控制</strong>：一条指令的功能往往由若干个操作的组合来实现的，因此CPU须管理这些操作，并产生完成这些操作所需的控制信号。</li>
-<li><strong>时间控制</strong>：对各种操作实施时间上的控制。</li>
-<li><strong>数据加工</strong>(<strong>CPU的根本任务</strong>)：对数据进行算术运算和逻辑运算处理。</li>
-</ul>
-</li>
-</ul>
-<p>从<strong>运算器</strong>和<strong>控制器</strong>两部分来看：</p>
-<ul>
-<li>运算器：<ul>
-<li>数据加工：算术&#x2F;逻辑运算</li>
-</ul>
-</li>
-<li>控制器：<ul>
-<li>程序控制：程序中执行指令顺序控制</li>
-<li>操作控制：将机器指令翻译成执行部件所需的操作控制信号(控制CPU内数据通路传送的部件)</li>
-<li>时序控制：控制操作信号的产生时间、持续时间</li>
-<li>异常控制：异常处理，外设交互</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-CPU中的寄存器"><a href="#4-CPU中的寄存器" class="headerlink" title="4.CPU中的寄存器"></a>4.CPU中的寄存器</h3><ol>
-<li>用户可见寄存器：允许机器语言或汇编语言的编程人员访问的寄存器。<ul>
-<li>通用寄存器：可由程序员指定其功能，可以用来存放操作数或地址。</li>
-<li>数据寄存器：仅可用于保存数据而不能用于操作数地址的运算。</li>
-<li>地址寄存器：用于存放地址，也可用于特殊的寻址方式。</li>
-<li>标志寄存器：用于保存状态标志。</li>
-</ul>
-</li>
-<li>控制和状态寄存器：对用户透明，由控制器直接控制的寄存器<ul>
-<li>程序计数器(PC)：存放下一条要待取指令在内存中的地址</li>
-<li>指令寄存器(IR)：用来存放当前正在执行的指令</li>
-<li>存储器地址寄存器(MAR)：用来存放将被访问的内存单元的地址</li>
-<li>存储器数据寄存器(MDR)：用来存放将要存入存储器中的数据，或是从存储器读出的数据</li>
-<li>程序状态字寄存器(PSW)：用来存放条件码和其它状态信息</li>
-</ul>
-</li>
-<li>主要寄存器<ul>
-<li>PC(Program Counter)程序计数器，必选</li>
-<li>IR(Instruction Register)指令寄存器，可选</li>
-<li>AR(Address Register)地址寄存器，可选</li>
-<li>DR(Data Register)数据缓冲寄存器，可选</li>
-<li>AC(Accumulate Count)累加寄存器，可选</li>
-<li>PSW(Program Status Word)程序状态字，可选</li>
-</ul>
-</li>
-</ol>
-<h3 id="5-操作控制器"><a href="#5-操作控制器" class="headerlink" title="5.操作控制器"></a>5.操作控制器</h3><p>功能：取指令，将机器指令译码并生成执行部件控制信号序列，建立正确的数据通路，从而完成指令的正确执行。</p>
-<ul>
-<li>硬布线控制器 (时序逻辑型) (硬件实现) (实现较为复杂，从而推出微程序控制器)<ul>
-<li>采用组合逻辑技术来实现，其控制单元由门电路组成的复杂树形网络</li>
-</ul>
-</li>
-<li>微程序控制器 (存储程序型) (软件实现)<ul>
-<li>采用存储逻辑实现。将微操作代码化，使每一条机器指令转化成为一段微程序并存入一个专门的存储器中，其中的微操作控制信号是由微指令产生</li>
-</ul>
-</li>
-</ul>
-<h2 id="6-2数据通路"><a href="#6-2数据通路" class="headerlink" title="6.2数据通路"></a>6.2数据通路</h2><p>(<em><strong>还没太搞清楚，只列举了一些知识点</strong></em>)</p>
-<h3 id="1-数据通路基本概念"><a href="#1-数据通路基本概念" class="headerlink" title="1.数据通路基本概念"></a>1.数据通路基本概念</h3><p><strong>数据通路</strong>：执行部件间传送信息的路径。</p>
-<ul>
-<li>通路的建立由<strong>控制信号</strong>控制，受<strong>时钟驱动</strong>。</li>
-<li>不同指令、同一指令在执行的不同阶段的数据通路不同。</li>
-<li>数据通路分类：共享通路(总线)、专用通路。<ul>
-<li>不同的数据通路对<strong>指令执行流程</strong>、<strong>执行效率</strong>以及<strong>微操作控制信号的时序安排</strong>有较大的影响。</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-数据通路抽象模型"><a href="#2-数据通路抽象模型" class="headerlink" title="2.数据通路抽象模型"></a>2.数据通路抽象模型</h3><p>(唔，得搁置一段时间)</p>
-<h3 id="3-D触发器定时模型"><a href="#3-D触发器定时模型" class="headerlink" title="3.D触发器定时模型"></a>3.D触发器定时模型</h3><p>(图片得搁置一段时间再补回来)<br>数据的定时间：</p>
-<ul>
-<li>时钟触发前输入须稳定一段<strong>建立时间</strong>(Setup Time)</li>
-<li>时钟触发后输入须稳定一段<strong>保持时间</strong>(Hold Time)</li>
-<li>时钟触发到输出稳定的时间<strong>触发器延迟</strong>(Clk_to_Q)</li>
-</ul>
-<h3 id="4-数据通路与时钟周期"><a href="#4-数据通路与时钟周期" class="headerlink" title="4.数据通路与时钟周期"></a>4.数据通路与时钟周期</h3><p>(后续补图)</p>
-<h3 id="5-保持时间违例"><a href="#5-保持时间违例" class="headerlink" title="5.保持时间违例"></a>5.保持时间违例</h3><p>(后续补图)</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" data-id="clpfcrd1q000dx0f573p6elix" data-title="第六章中央处理器" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2023-11-25" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/25/2023-11-25/" class="article-date">
-  <time class="dt-published" datetime="2023-11-25T11:49:15.000Z" itemprop="datePublished">2023-11-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/25/2023-11-25/">2023.11.25</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>唔，浑浑噩噩的一天。昨晚又熬夜了，早上十点过起床，洗漱后，继续完善markdown。<br>11:30去食堂吃午饭，不得不说，今天二期食堂凉菜那儿番茄的颜色看起来不太健康，有点偏黄，口感也不大好。<br>本打算午休半小时，但一直睡到下午三点过，可能是这段时间没有休息好，有点遭不住。醒后，啥也不想干就想躺在床上。<br>来到图书馆，已近4点，继续整理指令系统，学完指令格式设计，在写博客时，要在文章中插入一些图片(不就是插入图片嘛，多简单的一件事，但我就卡在这儿了)，只查阅了markdown如何插入图片，却不知道此方法在hexo存在一些问题，恼火。<br>搞到近6点，去吃晚饭，想着抓紧时间，争取今天把指令系统搞完，就去一期食堂吃冒菜，冒菜的菜品种类增加了，味道好像也比以前好了点儿，吃饭期间看见好几个搞啥宣传的，到处拉人帮他们扫二维码，旁边两哥们都遭了。<br>饭后买了瓶饮料，回到座位上，又继续试图解决插入图片的问题，折腾一会儿后，没有丝毫进展，受不了一点，不想搞了，并打算回去看看课外书，今晚好早点休息。<br>诶…今天过得太废物了，今晚不能再熬夜了。明天争取早点起床，好几天没有按时吃过早饭了，受不了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/25/2023-11-25/" data-id="clpfcrd1j0004x0f59ve6ekrq" data-title="2023.11.25" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2023-11-24" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/24/2023-11-24/" class="article-date">
-  <time class="dt-published" datetime="2023-11-24T13:25:19.000Z" itemprop="datePublished">2023-11-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/24/2023-11-24/">2023.11.24</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>唔，今天感觉也没做啥事，早上将近十点才起床，洗漱完，已经十点半了，索性就不吃早饭。<br>打开电脑继续完善markdown的内容，虽说大部分内容都是照搬官网的，但这种搬运式的学习方式对于我来说挺有用。如果只是一味的看官网上的教程，估计我要不了多久就会失去兴趣。就一直写到差不多11：30。饭后，继续开始搬运，不知不觉写到了1点过。<br>睡完午觉，收拾好书包，去了图书馆。眼看着距离英语考试没几天了，就随手写了一道英语阅读题，5道题错4道（T_T），敲，做不了一点，不做了。<br>无奈之下，开始学习很久没有碰过的计算机组成原理，一边刷慕课，一边看书，顺便再写到博客上。刚开始写博客的时候还在纠结：我是该以什么方式写呢，如果只是列出知识点的化，感觉太枯燥了，如果当中穿插着自己对于知识点的阐述和理解的话，各个知识点之间的逻辑关系就难以体现。诶，恼火。最后决定，把这两部份分开来写，先把知识点整理出来，最后以章为单位进行自我阐述。<br>至于今天一边看慕课，一边看书，一边写博客的学习方式，学习效果有点出乎意料。今天复习了和整理了一下指令系统，以前学完后做课后练习题，对于大部分的题目都没有头绪，甚至决定课后习题里面的东西在视频中没有相应的介绍(并开始破口大骂)。但今天才知道，视频大多数都是有讲解的，诶，只能说没有好好看好好学。<br>最后呢，好像没啥了。Good，下机。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/24/2023-11-24/" data-id="clpfcrd1g0002x0f596p0bri5" data-title="2023.11.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-第五章-指令系统" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" class="article-date">
-  <time class="dt-published" datetime="2023-11-24T08:12:23.000Z" itemprop="datePublished">2023-11-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/">第五章 指令系统 知识点</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><strong>什么是指令？</strong></p>
-<ul>
-<li>计算机能直接识别、执行的操作命令(机器指令)。</li>
-<li>冯诺依曼结构计算机“程序控制”原理实现的载体。</li>
-<li>软、硬件界面和程序员操作计算机硬件的接口。</li>
-<li>硬件设计的依据和软件设计的基础，直接影响计算机系统的性能。</li>
-</ul>
-<p><strong>什么是指令系统？</strong></p>
-<p>一台计算机或处理器能够识别和执行的所有计算机指令的集合。CPU通过执行一系列机器指令来完成各种计算和控制任务。<br>指令系统通常分为两种类型:<em><strong>精简指令系统计算机(RISC)</strong></em>,<em><strong>复杂指令系统计算机(CISC)</strong></em></p>
-<p><strong>指令的分类</strong></p>
-<ol>
-<li><p><strong>根据计算机层次结构分类</strong></p>
-<ul>
-<li>高级语言指令、汇编语言指令、机器语言指令和微指令指令。</li>
-</ul>
-</li>
-<li><p><strong>根据指令中地址码字段个数分类</strong></p>
-<ul>
-<li>三地址指令、二地址指令、一地址指令和零地址指令。地址个数越少，指令能够访问的范围越大。</li>
-</ul>
-</li>
-<li><p><strong>根据指令中操作数的物理位置分类</strong></p>
-<ul>
-<li>存储器-存储器(SS)型。(该指令类型要访问两次主存，指令速度较慢，故已不存在)</li>
-<li>寄存器-寄存器(RR)型。</li>
-<li>寄存器-存储器(Rs)型。</li>
-</ul>
-</li>
-<li><p><strong>根据指令的功能分类</strong></p>
-<ul>
-<li>传送指令、定点算术运算指令、位运算指令和控制转移指令。</li>
-</ul>
-</li>
-</ol>
-<p><strong>指令字长</strong></p>
-<ul>
-<li>指令中包含的二进制位数。</li>
-<li>与机器字长相比：单字长、双字长、半字长等长度指令。</li>
-<li>多字长指令(至少双字长)<ul>
-<li>解决寻址较大存储空间的问题。(拓展技术)</li>
-<li>取址多次访问，影响速度，占有空间大。</li>
-</ul>
-</li>
-<li>等长指令：指令字长固定。(易于硬件的设计及简化)</li>
-<li>变长指令：指令字长度根据需要可变。(怎加硬件设计和简化的难度)</li>
-</ul>
-<h2 id="5-1指令系统的发展"><a href="#5-1指令系统的发展" class="headerlink" title="5.1指令系统的发展"></a>5.1指令系统的发展</h2><p>为继承已有的软件，减少软件开发费用，诞生了<strong>系列计算机</strong>(<em>同一公司不同时期生产，基本系统结构和指令系统相同的计算机</em>)使得在旧机种上运行的软件可以不加任何修改地在新机种上运行。与之相对应的还有<strong>兼容机</strong>(<em>不同公司生产，基本系统结构和指令系统相同的计算机</em>)<br>随着计算机的发展，指令系统也趋于多用途、强功能化，但指令结构太复杂也会带来一些不利因素，因此提出了CISC和RISC。</p>
-<h2 id="5-2指令格式"><a href="#5-2指令格式" class="headerlink" title="5.2指令格式"></a>5.2指令格式</h2><h3 id="5-2-1指令格式"><a href="#5-2-1指令格式" class="headerlink" title="5.2.1指令格式"></a>5.2.1指令格式</h3><p>一条指令一般包含</p>
-<ol>
-<li><strong>操作码</strong>：具体说明操作的性质及功能。</li>
-<li><strong>操作数</strong>：指令的输入，即执行操作所需的数据或地址信息。</li>
-<li><strong>寻址方式</strong>：如何找到或计算操作数的地址。</li>
-<li><strong>操作控制码</strong>：有时候，指令可能包含一些额外的控制信息，用于指导处理器的具体行为。这可能包含标志位的设置、条件执行的控制等。</li>
-<li><strong>拓展字段</strong>：有些指令可能包含拓展字段，用于提供额外的信息或操作码的变体。这对于支持复杂操作或者特殊功能非常有用。</li>
-</ol>
-<p>操作码字段的位数与支持的最大指令数量有关。</p>
-<ul>
-<li>对于定长操作码而言，操作码的长度&#x3D;log2N。</li>
-<li>支持变长操作码时，操作码可向不用的地址码字段扩展。<br>寻址方式字段的位数与支持的寻址方式种类有关。<br>地址码字段的作用及影响与其位数和寻址方式有关。</li>
-</ul>
-<p><strong>根据地址码部分所给出地址的个数，对指令格式进行分类</strong></p>
-<ol>
-<li><strong>零地址指令</strong><ul>
-<li>无需任何操作数，如空操作指令、停机指令等。</li>
-<li>操作数地址默认，如堆栈结构计算机的运算指令，所需的操作数默认在堆栈中。</li>
-</ul>
-</li>
-<li><strong>一地址指令</strong><ul>
-<li>指令中只给出一个地址，该地址既是操作数地址，又是操作结果的存储地址。</li>
-</ul>
-</li>
-<li><strong>二地址指令</strong><ul>
-<li>最常见的指令格式两个地址指出两个源操作数地址，其中一个还是存放结果的地址。</li>
-</ul>
-</li>
-<li><strong>三地址指令</strong><ul>
-<li>对A1、A2地址指出的两个元操作数进行操作后，将结果存入目的地址A3。</li>
-</ul>
-</li>
-<li><strong>多地址指令</strong><ul>
-<li>在某些性能较强的计算机中，往往设置处理成批数据的指令。</li>
-</ul>
-</li>
-</ol>
-<h3 id="5-2-2指令操作码的扩展技术"><a href="#5-2-2指令操作码的扩展技术" class="headerlink" title="5.2.2指令操作码的扩展技术"></a>5.2.2指令操作码的扩展技术</h3><p>指令操作码通常有两种编码格式：<strong>固定个格式</strong>,<strong>可变格式</strong>。<br><strong>如何扩展</strong>：在指令字中用一个固定长度的字段表示基本操作码，而对于一部分不需要某个地址码的指令，把它们的操作码扩充到该地址字段。<br><strong>扩展技术使用原则</strong>：使用频度高的指令应分配短的操作码，使用频度低的指令相应地分配较长的操作码。<br><strong>霍夫曼编码的操作码</strong>：根据程序中指令出现频率高低而赋以不同长度的操作码。</p>
-<p>虽然扩展码技术是一种重要的指令优化技术，可以缩短指令的平均长度，减少程序的总位数以及增加指令字所能表示的操作信息。<strong>但是</strong>，扩展操作码比固定操作码译码复杂，使控制器的设计难度增大，且需要更多的硬件支持。</p>
-<h3 id="5-2-3指令长度与数据字长的关系"><a href="#5-2-3指令长度与数据字长的关系" class="headerlink" title="5.2.3指令长度与数据字长的关系"></a>5.2.3指令长度与数据字长的关系</h3><ul>
-<li>数据字长决定了计算机的运算精度，字长越长，计算机的运算精度越高。</li>
-<li>地址码长度决定了指令直接寻址能力。</li>
-<li>为便于处理数据和尽可能地充分利用存储空间，一般机器的字长都是字节长度的1、2、4或8倍。</li>
-<li>指令码的长度主要取决于操作码的长度、操作数地址的长度和操作数地址的个数。</li>
-</ul>
-<h2 id="5-3寻址方式"><a href="#5-3寻址方式" class="headerlink" title="5.3寻址方式"></a>5.3寻址方式</h2><p><strong>什么是寻址？</strong><br>确定本条指令的数据地址及下一条要执行的指令地址的方法，与计算机硬件结构紧密相连，而且对指令格式和功能有很大影响。不同计算机有不同的寻址方式，但基本原理是相同的。有的计算机寻址种类较少，因此在指令操作码中直接表示出寻址方式；而有的计算机采用多种寻址方式，因此在指令中专设一个字段表示一个操作数的来源或去向。</p>
-<h3 id="5-3-1指令的寻址方式"><a href="#5-3-1指令的寻址方式" class="headerlink" title="5.3.1指令的寻址方式"></a>5.3.1指令的寻址方式</h3><ol>
-<li><strong>顺序寻址</strong>：<ul>
-<li>程序的指令序列在主存顺序存放。执行时<strong>从第一条执行开始</strong>，逐条取出并逐条执行。</li>
-<li>CPU中设置<strong>程序计数器</strong>(PC)对指令的顺序号进行计数。PC开始时存放程序的首地址，每执行一条指令，PC加”<em><strong>1</strong></em>“(<em><strong>存储1条指令占用的字节单元数</strong></em>)，指出下一条指令的地址，直到程序结束。</li>
-</ul>
-</li>
-<li><strong>跳跃寻址</strong><ul>
-<li>通常通过跳转指令(分支指令)实现。</li>
-</ul>
-</li>
-</ol>
-<h3 id="5-3-2操作数寻址方式"><a href="#5-3-2操作数寻址方式" class="headerlink" title="5.3.2操作数寻址方式"></a>5.3.2操作数寻址方式</h3><ol>
-<li><strong>立即数寻址</strong><ul>
-<li>所需的操作数由指令的地址码部分直接给出。</li>
-<li>特点：<ul>
-<li>取指时，操作码和一个操作数同时被取出，减少了访问存储器的次数，提高了指令的执行速度。</li>
-<li><strong>最大优点</strong>便于程序设计(变量赋初值)。</li>
-<li>数据大小受字段数限制。</li>
-<li>不能修改操作数数值。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>寄存器寻址</strong><ul>
-<li>操作数在CPU的内部寄存器中</li>
-<li>特点：<ul>
-<li>操作数在寄存器中，指令执行速度快。</li>
-<li>能访问的数据大小一般与计算机字长有关。该指令的地址码位数只影响能访问的寄存器个数，不影响访问数据的大小。</li>
-<li>地址字段的位数与计算机通用寄存器数量相关。</li>
-<li>缩短指令长度，节省存储空间。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>直接寻址</strong><ul>
-<li>地址码字段直接给出操作数在内存中的地址。</li>
-<li>特点：<ul>
-<li>提供访问主存的操作。</li>
-<li>获得数据要访问主存，指令执行速度慢。</li>
-<li><strong>地址字段的位数决定了访存空间的大小</strong>，因此引入间接寻址。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>间接寻址</strong><ul>
-<li>地址码字段给出的是操作数地址的地址。</li>
-<li>特点：<ul>
-<li><strong>解决了直接寻址方式下地址字段的位数限制访存范围大小的问题</strong>。</li>
-<li>获得数据要访问主存2次，指令执行速度太慢。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>寄存器简介寻址</strong><ul>
-<li>地址码字段给出的是寄存器编号。(先访问地址码字段给出的寄存器，在寄存器中获得操作数在主存中的位置)</li>
-<li>特点：<ul>
-<li>解决了直接寻址方式下地址字段的位数限制访存范围大小的问题。</li>
-<li>获得数据只需访问主存一次。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>相对寻址</strong><ul>
-<li>将程序计数器PC的内容与指令的地址码部分给出的位移量(Disp)之和作为操作数的地址或转移地址。</li>
-<li>特点：<ul>
-<li>可节省指令中的地址位数，便于程序在内存中成块移动。</li>
-<li><strong>注意</strong>：<strong>PC的改变对计算的影响</strong>(回顾5.3.1 1.顺序寻址)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>基址寻址</strong><ul>
-<li>在计算机中设置一个专用的基址寄存器，或由指令指定一个通用寄存器为基址寄存器。操作数地址由基址寄存器的内容和指令的地址码A相加得到。地址码A通常被称为位移量。</li>
-<li>特点：<ul>
-<li>使用基址寄存器可以访问更大的主存空间。</li>
-<li>对某一程序而言，基址值设定后不变，故要访问不同数据需修改指令中地址码字段。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>变址寻址</strong><ul>
-<li>指定一个变址寄存器，与本地指令地址无关，内容可随要求改变。</li>
-<li>特点：<ul>
-<li>不改变指令即可改变数据的有效地址，可在循环中使用。</li>
-<li>在字符串处理，向量运算等等成批数据处理中非常有用。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<p><strong>总结</strong></p>
-<ol>
-<li>立即寻址     快，便于程序设计，赋初值，初值大小受限</li>
-<li>寄存器寻址   快，便于程序设计，不能访问主存</li>
-<li>直接寻址     慢，便于程序设计，提供访存，范围受限</li>
-<li>间接寻址     很慢，解决直接寻址访存范围受限的问题</li>
-<li>寄存器间接   慢，便于程序设计，提供访存，范围增大</li>
-<li>相对寻址     慢，提供访存，不能再循环中使用</li>
-<li>变址寻址     慢，便于程序设计，提供访存，可在循环中使用</li>
-<li>基址寻址     慢，提供更大的范围的访存能力，不能在循环中使用</li>
-</ol>
-<h2 id="5-4指令格式设计"><a href="#5-4指令格式设计" class="headerlink" title="5.4指令格式设计"></a>5.4指令格式设计</h2><h3 id="5-4-1指令格式设计的主要内容"><a href="#5-4-1指令格式设计的主要内容" class="headerlink" title="5.4.1指令格式设计的主要内容"></a>5.4.1指令格式设计的主要内容</h3><ul>
-<li>根据指令数量的要求及是否支持操作码扩展，确定操作码字段的位数。</li>
-<li>根据对操作数的要求确定地址码字段的个数。</li>
-<li>根据寻址方式的要求，为每个地址码字段确定寻址方式字段位数。</li>
-<li>确定采用定长指令还是变长指令</li>
-</ul>
-<h3 id="5-4-2指令格式设计举例"><a href="#5-4-2指令格式设计举例" class="headerlink" title="5.4.2指令格式设计举例"></a>5.4.2指令格式设计举例</h3><p>(抱歉喔，这儿的例题估计得耽搁一段时间，还没搞懂hexo和markdown插入图片得方法)</p>
-<h2 id="5-5"><a href="#5-5" class="headerlink" title="5.5"></a>5.5</h2><p>…<em><strong>未完待续</strong></em>…</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" data-id="clpfcrd1p000cx0f5f6svga5d" data-title="第五章 指令系统 知识点" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-markdown" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/24/markdown/" class="article-date">
-  <time class="dt-published" datetime="2023-11-24T03:09:04.000Z" itemprop="datePublished">2023-11-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/markdown/">markdown</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/24/markdown/">markdown</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/">官方教程</a></p>
-<h2 id="1-标题语法"><a href="#1-标题语法" class="headerlink" title="1.标题语法"></a>1.标题语法</h2><p>创建标题时，在单词或短语前添加（#），（#）的数量代表标题的级别。例如，两个#表示创建一个二级标题。</p>
-<h2 id="2-段落语法"><a href="#2-段落语法" class="headerlink" title="2.段落语法"></a>2.段落语法</h2><p>使用空白行将一行或多行文本进行分隔。<br>注意：不能使用空格和制表符缩进段落。</p>
-<h2 id="3-换行语法"><a href="#3-换行语法" class="headerlink" title="3.换行语法"></a>3.换行语法</h2><p>在一行的末尾添加两个或多个空格，然后按回车键，即可创建一个换行。（但是直接回车也能够换行）</p>
-<h2 id="4-强调语法"><a href="#4-强调语法" class="headerlink" title="4.强调语法"></a>4.强调语法</h2><p>通过将文本设置为粗体或斜体来强调其重要性。</p>
-<h3 id="1-粗体-Bold"><a href="#1-粗体-Bold" class="headerlink" title="(1).粗体(Bold)"></a>(1).粗体(Bold)</h3><p>在单词或短语的前后各添加两个星号(**)或下划线(__)，为兼容考虑，在单词或短语中间部分进行加粗时请使用星号(*)。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ I just love **bold text**.</span><br><span class="line">$ I just love __bold text__.</span><br></pre></td></tr></table></figure>
-<p>预览效果：<br>I just love <strong>bold text</strong>.<br>I just love <strong>bold text</strong>.</p>
-<h3 id="2-斜体-Italic"><a href="#2-斜体-Italic" class="headerlink" title="(2).斜体(Italic)"></a>(2).斜体(Italic)</h3><p>在单词或短语前后添加一个星号(*)或下划线(_)。若用斜体突出单词中间部分，请在字母前后添加一个星号，中间不带空格。</p>
-<h3 id="3-同时使用斜体和粗体"><a href="#3-同时使用斜体和粗体" class="headerlink" title="(3).同时使用斜体和粗体"></a>(3).同时使用斜体和粗体</h3><p>在单词或短语前后添加三个星号或下划线。</p>
-<h2 id="5-引用语法"><a href="#5-引用语法" class="headerlink" title="5.引用语法"></a>5.引用语法</h2><p>创建块引用，在段落前添加一个(&gt;)符号。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Dorothy followed her through many of the beautiful rooms <span class="keyword">in</span> her castle.</span><br></pre></td></tr></table></figure>
-<p>预览效果：</p>
-<blockquote>
-<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
-</blockquote>
-<h3 id="1-多个段落的块引用"><a href="#1-多个段落的块引用" class="headerlink" title="(1).多个段落的块引用"></a>(1).多个段落的块引用</h3><p>块引用可以包含多个段落。为段落之间的空白行添加一个(&gt;)符号。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; Dorothy followed her through many of the beautiful rooms <span class="keyword">in</span> her castle.</span><br><span class="line">&gt;</span><br><span class="line">&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</span><br></pre></td></tr></table></figure>
-<p>预览效果：</p>
-<blockquote>
-<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
-<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
-</blockquote>
-<h3 id="2-嵌套块引用"><a href="#2-嵌套块引用" class="headerlink" title="(2).嵌套块引用"></a>(2).嵌套块引用</h3><p>块引用可以嵌套。在要嵌套的段落前添加一个(&gt;&gt;)符号。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; Dorothy followed her through many of the beautiful rooms <span class="keyword">in</span> her castle.</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</span><br></pre></td></tr></table></figure>
-<p>效果预览：</p>
-<blockquote>
-<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
-<blockquote>
-<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
-</blockquote>
-</blockquote>
-<h3 id="3-带有其它元素的块引用"><a href="#3-带有其它元素的块引用" class="headerlink" title="(3).带有其它元素的块引用"></a>(3).带有其它元素的块引用</h3><p>块引用可以包含其他Markdown格式的元素。但并飞所有的元素都可以使用，需要进行实验以查看哪些元素有效。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment">#### The quarterly results look great!</span></span><br><span class="line">&gt;</span><br><span class="line">&gt; - Revenue was off the chart.</span><br><span class="line">&gt; - Profits were higher than ever.</span><br><span class="line">&gt;</span><br><span class="line">&gt; *Everything* is going according to **plan**.</span><br></pre></td></tr></table></figure>
-<p>效果预览：</p>
-<blockquote>
-<h4 id="The-quarterly-results-look-great"><a href="#The-quarterly-results-look-great" class="headerlink" title="The quarterly results look great!"></a>The quarterly results look great!</h4><ul>
-<li>Revenue was off the chart.</li>
-<li>Profits were higher than ever.</li>
-</ul>
-<p><em>Everything</em> is going according to <strong>plan</strong>.<br>综上呢，块引用可以在标题语法，强调语法和列表语法当中使用。</p>
-</blockquote>
-<h2 id="6-列表语法"><a href="#6-列表语法" class="headerlink" title="6.列表语法"></a>6.列表语法</h2><p>可以将多个条目组织成有序或无序列表。</p>
-<h3 id="1-有序列表"><a href="#1-有序列表" class="headerlink" title="(1).有序列表"></a>(1).有序列表</h3><p>每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但列表应当以数字1开始。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. First item</span><br><span class="line">2. Second item</span><br><span class="line">1. Third item</span><br></pre></td></tr></table></figure>
-<p>预览效果：</p>
-<ol>
-<li>First item</li>
-<li>Second item</li>
-<li>Third item</li>
-</ol>
-<h3 id="2-无序列表"><a href="#2-无序列表" class="headerlink" title="(2).无序列表"></a>(2).无序列表</h3><p>在每个列表项前添加破折号(-)、星号(*)或加号(+)。缩进一个或多个列表项可创建嵌套列表。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- First item</span><br><span class="line">- Second item</span><br><span class="line">- Third item</span><br><span class="line">    - Indented item</span><br><span class="line">    - Indented item</span><br><span class="line">- Foruth item</span><br></pre></td></tr></table></figure>
-<p>预览效果：</p>
-<ul>
-<li>First item</li>
-<li>Second item</li>
-<li>Third item<ul>
-<li>Indented item</li>
-<li>Indented item</li>
-</ul>
-</li>
-<li>Foruth item<br>注意：不能在同一个列表中使用不同的符号。</li>
-</ul>
-<h3 id="3-在列表中嵌套其他元素"><a href="#3-在列表中嵌套其他元素" class="headerlink" title="(3).在列表中嵌套其他元素"></a>(3).在列表中嵌套其他元素</h3><p>要保留列表连续性的同时在列表中添加另一种元素，请将该元素缩进四个空格或一个制表符。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- This is the first list item.</span><br><span class="line">- Here<span class="string">&#x27;s the second list item.</span></span><br><span class="line"><span class="string">    I need to add anther paragraph below the second list item.</span></span><br><span class="line"><span class="string">- And here&#x27;</span>s the third item.</span><br></pre></td></tr></table></figure>
-<p>预览效果：</p>
-<ul>
-<li>This is the first list item.</li>
-<li>Here’s the second list item.<br>  I need to add anther paragraph below the second list item.</li>
-<li>And here’s the third item.</li>
-</ul>
-<h4 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- This is the first list item.</span><br><span class="line">- Here<span class="string">&#x27;s the second list item.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &gt; A blockquote would look great below the second list item.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- And here&#x27;</span>s the third list item.</span><br></pre></td></tr></table></figure>
-<p>效果预览：</p>
-<ul>
-<li><p>This is the first list item.</p>
-</li>
-<li><p>Here’s the second list item.</p>
-<blockquote>
-<p>A blockquote would look great below the second list item.</p>
-</blockquote>
-</li>
-<li><p>And here’s the third list item.</p>
-</li>
-</ul>
-<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>通常采用四个空格或一个制表符缩进。当代买块在列表中时，请将它们缩进八个空格或两个制表符。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.  Open the file.</span><br><span class="line">2.  Find the following code block on line 21:</span><br><span class="line"></span><br><span class="line">        &lt;html&gt;</span><br><span class="line">          &lt;<span class="built_in">head</span>&gt;</span><br><span class="line">            &lt;title&gt;Test&lt;/title&gt;</span><br><span class="line">          &lt;/head&gt;</span><br><span class="line"></span><br><span class="line">3.  Update the title to match the name of your website.</span><br></pre></td></tr></table></figure>
-<p>效果预览：</p>
-<ol>
-<li><p>Open the file.</p>
-</li>
-<li><p>Find the following code block on line 21:</p>
-<pre><code>&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Test&lt;/title&gt;
-  &lt;/head&gt;
-</code></pre>
-</li>
-<li><p>Update the title to match the name of your website.</p>
-</li>
-</ol>
-<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><p>通常使用</p>
-<p>其中’Alt text’是图片的替代文本，’UPL’是图片链接地址。</p>
-<ol>
-<li><p>使用在线图片：如果需要插入的图片已经上传到互联网上，只需提供图片的URL</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用本地图片：可以使用相对或绝对路径。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加替代文本：替代文本对于辅助技术和在加载图片失败时提供描述很重要。确保替代文本描述了图片的内容或作用。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ol>
-<h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><p>顺序列表和无序列表可以相互嵌套。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. First item</span><br><span class="line">2. Second item</span><br><span class="line">3. Third item</span><br><span class="line">    - Indented item</span><br><span class="line">    - Indented item</span><br><span class="line">4. Fourth item</span><br></pre></td></tr></table></figure>
-<p>效果预览：</p>
-<ol>
-<li>First item</li>
-<li>Second item</li>
-<li>Third item<ul>
-<li>Indented item</li>
-<li>Indented item</li>
-</ul>
-</li>
-<li>Fourth item</li>
-</ol>
-<h2 id="7-代码语法"><a href="#7-代码语法" class="headerlink" title="7.代码语法"></a>7.代码语法</h2><p>要将单词或短语表示为代码，请将其包裹在反引号(‘’)中。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">At the command prompt, type `nano`.</span><br></pre></td></tr></table></figure>
-<p>预览效果：<br>At the command prompt, type <code>nano</code>.</p>
-<h3 id="转义反引号"><a href="#转义反引号" class="headerlink" title="转义反引号"></a>转义反引号</h3><p>若要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(&#96;&#96;)中。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">``Use `code` in your Markdown file.``</span><br></pre></td></tr></table></figure>
-<p>预览效果：<br><code>Use `code` in your Markdown file.</code></p>
-<h3 id="代码块-1"><a href="#代码块-1" class="headerlink" title="代码块"></a>代码块</h3><p>创建代码块，请将代码块的每一行缩进至少四个空格或一个制表符。(诶，没有用)<br>个人比较常用<strong>围栏代码块</strong><br>    -在代码块之前和之后的行上使用三个反引号 (&#96;&#96;&#96;)或三个波浪号(~~~)。</p>
-<h2 id="8-分割线语法"><a href="#8-分割线语法" class="headerlink" title="8.分割线语法"></a>8.分割线语法</h2><p>在单独一行上使用三个或多个星号(***)、破折号(—)和下划线(___)，不能包含其他内容。<br><strong>注意</strong>：为了兼容性，请在分隔线的前后均添加空白行。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Try to put a blank line before...</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">...and after a horizontal rule.</span><br></pre></td></tr></table></figure>
-
-<p>预览效果：</p>
-<p>Try to put a blank line before…</p>
-<hr>
-<p>…and after a horizontal rule.</p>
-<h2 id="9-链接语法"><a href="#9-链接语法" class="headerlink" title="9.链接语法"></a>9.链接语法</h2><p>超链接语法代码：<code>[超链接显示名](超链接地址 &quot;超链接title&quot;)</code></p>
-<h3 id="给链接增加Title"><a href="#给链接增加Title" class="headerlink" title="给链接增加Title"></a>给链接增加Title</h3><p>链接title是当鼠标悬停在链接上时会出现的文字，title是可选的，<strong>跟链接地址之间以空格分隔</strong>。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [Markdown语法](https://markdown.com.cn &quot;最好的markdown教程&quot;)。</span><br></pre></td></tr></table></figure>
-<p>预览效果：<br>这是一个链接 <a target="_blank" rel="noopener" href="https://markdown.com.cn/" title="最好的markdown教程">Markdown语法</a>。</p>
-<h3 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h3><p>使用尖括号(&lt;&gt;)可以很方便地把URL或者email地址变成可点击地链接。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://narkdown.com.cn&gt;</span><br><span class="line">&lt;fake@example.com&gt;</span><br></pre></td></tr></table></figure>
-<p>预览效果：<br><a target="_blank" rel="noopener" href="https://narkdown.com.cn/">https://narkdown.com.cn</a><br><a href="mailto:&#x66;&#x61;&#107;&#x65;&#x40;&#101;&#x78;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;">&#x66;&#x61;&#107;&#x65;&#x40;&#101;&#x78;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;</a></p>
-<h3 id="带格式化地链接"><a href="#带格式化地链接" class="headerlink" title="带格式化地链接"></a>带格式化地链接</h3><p>强调链接，在链接语法前后增加星号。若要将链接表示为代码，需在方括号中添加反引号。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I love supporting the **[EFF](https://eff.org)**.</span><br><span class="line">This is the *[Markdown Guide](https://www.markdownguide.org)*.</span><br><span class="line">See the section on [`code`](#code).</span><br></pre></td></tr></table></figure>
-<p>预览效果：<br>I love supporting the <strong><a target="_blank" rel="noopener" href="https://eff.org/">EFF</a></strong>.<br>This is the <em><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown Guide</a></em>.<br>See the section on <a href="#code"><code>code</code></a>.</p>
-<h3 id="引用类型链接"><a href="#引用类型链接" class="headerlink" title="引用类型链接"></a>引用类型链接</h3><p>引用样式链接是一种特殊链接，它使URL在markdown中更易于显示和阅读。该链接分为两部分：与文本保持内联地部分以及存储在文件中其他位置的部分，以使文本易于阅读。(哎哟，其实就类似于函数定义和函数引用)</p>
-<h4 id="链接的第一部分格式"><a href="#链接的第一部分格式" class="headerlink" title="链接的第一部分格式"></a>链接的第一部分格式</h4><p>使用两组方括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组方括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。应在两组括号间添加一个空格。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。例如：<code>[hobbit-hole] [1]</code></p>
-<h4 id="链接的第二部分格式"><a href="#链接的第二部分格式" class="headerlink" title="链接的第二部分格式"></a>链接的第二部分格式</h4><p>引用类型链接的第二部分使用以下属性设置格式：</p>
-<ol>
-<li>放在括号中的标签，其后紧跟一个冒号和至少一个空格(例如 <code>[label]:</code>)。</li>
-<li>链接的UPL，可以选择将其括在尖括号中。</li>
-<li>链接的可选标题，可以将其括在双引号，单引号或括号中。<br>例如：<code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle</code><br><strong>注意</strong>：为提高兼容性，在处理URL中间的空格时，尽量使用<code>%20</code>代替空格<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[link]</span><br><span class="line">(https://www.example.com/my%20great%20page)</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="10-图片语法"><a href="#10-图片语法" class="headerlink" title="10.图片语法"></a>10.图片语法</h2><p>…<em><strong>未完待续</strong></em>…</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/24/markdown/" data-id="clpfcrd1l0006x0f55hxx8pqt" data-title="markdown" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-第三章-处理机调度与死锁" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/24/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" class="article-date">
-  <time class="dt-published" datetime="2023-11-24T03:03:29.000Z" itemprop="datePublished">2023-11-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/24/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/">第三章 处理机调度与死锁</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="3-1处理机调度"><a href="#3-1处理机调度" class="headerlink" title="3.1处理机调度"></a>3.1处理机调度</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/24/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-id="clpfcrd1o0009x0f5he14hri1" data-title="第三章 处理机调度与死锁" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-怎么使用hexo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/23/%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8hexo/" class="article-date">
-  <time class="dt-published" datetime="2023-11-23T14:50:48.000Z" itemprop="datePublished">2023-11-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo/">hexo</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/23/%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8hexo/">hexo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="自用"><a href="#自用" class="headerlink" title="!!!自用!!!"></a>!!!<strong>自用</strong>!!!</h1><p>有很多地方还没搞懂。<br>    <a target="_blank" rel="noopener" href="https://www.githubstatus.com/">https://www.githubstatus.com</a></p>
-<h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$   hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="三种默认布局"><a href="#三种默认布局" class="headerlink" title="三种默认布局"></a>三种默认布局</h3><p>post：默认的文章布局。常使用此布局<br>page：用于创建独立的页面，通常不包含时间戳或归档信息，而是作为站点的独立页面存在（不太了解此布局，还未使用过该布局。后续补充）<br>draft：暂时不想发布的草稿文章，不会被默认生成静态文件，也不会在正式的博客页面中显示。</p>
-<h3 id="后续操作"><a href="#后续操作" class="headerlink" title="后续操作"></a>后续操作</h3><p>编写完文章后，使用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-<p>生成静态文件，以便后续部署到博客网站上。<br>使用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>在本地进行开发、调试和预览，可在本地浏览器中查看博客。<br>最后</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>将生成的静态文件部署到指定的博客托管平台，使其可以在互联网上进行访问，注意在使用前须要进行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&quot;XXX&quot;</span></span><br><span class="line">git config --global user.name <span class="string">&quot;XXX&quot;</span></span><br></pre></td></tr></table></figure>
-<p>操作</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/23/%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8hexo/" data-id="clpfcrd1n0008x0f54uq3bpxb" data-title="hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2023-11-23" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/23/2023-11-23/" class="article-date">
-  <time class="dt-published" datetime="2023-11-23T13:19:07.000Z" itemprop="datePublished">2023-11-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/23/2023-11-23/">2023.11.23</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>芜湖，晚上回去再写<br>2023.11.24(补)：敲，写不了一点，不写了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/23/2023-11-23/" data-id="clpfcrd1e0001x0f5eu4ie63d" data-title="2023.11.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/23/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-11-23T08:51:55.071Z" itemprop="datePublished">2023-11-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/23/hello-world/" data-id="clpfcrd1k0005x0f54k9lc0sk" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/">第四章存储管理</a>
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
           </li>
+          
         
-          <li>
-            <a href="/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/">第六章中央处理器</a>
-          </li>
         
-          <li>
-            <a href="/2023/11/25/2023-11-25/">2023.11.25</a>
-          </li>
-        
-          <li>
-            <a href="/2023/11/24/2023-11-24/">2023.11.24</a>
-          </li>
-        
-          <li>
-            <a href="/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/">第五章 指令系统 知识点</a>
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
     </div>
   </div>
+</nav>
 
   
-</aside>
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+          
+        </div>
+
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+
       
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
   </div>
-</footer>
+</div>
 
-    </div>
-    <nav id="mobile-nav">
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/26/2023-11-26/" target="_self">
+          2023.11.26
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/11/26/2023-11-26/" target="_self">
+        <div>
+          坏消息，依旧没有做到早起，和按时吃早饭。近十点起床，洗漱完，便去了图书馆。昨晚近一点半睡觉，但感觉休息的还不错。今天做的事情就比较单一了，几乎一整天都在整理组成原理。由于明天有组成原理的课不得不提前预习一下，就把第五章放了放，等以后有时间了再来补上。午饭去晚了，没有凉菜，就随便吃了点儿。至于晚饭，今晚的番茄比昨天的好多了，但卷心菜全是叶茎。还有，走的时候酸奶卖完了。饭后回来，顺便给换了个主题。看H
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-26 19:30" pubdate>
+              2023-11-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
   
-    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%97%A5%E8%AE%B0/" class="category-chain-item">日记</a>
   
-</nav>
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/" target="_self">
+          第四章存储管理
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/11/26/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/" target="_self">
+        <div>
+          (只列举相关的知识点，定义啥的，以后再来补充)引入：存储管理是计算机系统的重要组成部分，用于存储包括程序和数据在内的各种信息，亦属于非常重要的系统资源。 4.1程序的链接和接入引入：要使源程序能够运行，必须经过：编译、链接和装入 4.1.1逻辑地址、物理地址和虚拟地址 逻辑地址(相对地址) 逻辑地址空间 物理地址 物理地址空间 虚拟地址空间和虚拟地址  4.1.2程序链接链接程序在将几个模块装配成
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-26 16:53" pubdate>
+              2023-11-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="category-chain-item">操作系统</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" target="_self">
+          第六章中央处理器
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" target="_self">
+        <div>
+          6.1CPU的组成与功能1.CPU概述计算机硬件体系架构遵循冯诺依曼计算机的基本原理  冯诺依曼计算机的主要功能部件 运算器、控制器、存储器、输入和输出设备。   冯诺依曼计算机的主要工作原理 存储程序和程序控制。    2.CPU基本组成从整体来看可分为如下几部分：  控制单元(Control Unit)：用于产生各种控制信号 算术逻辑单元(ALU)：算术和逻辑运算 寄存器(Registers)
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-26 11:08" pubdate>
+              2023-11-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" class="category-chain-item">计算机组成原理</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/25/2023-11-25/" target="_self">
+          2023.11.25
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/11/25/2023-11-25/" target="_self">
+        <div>
+          唔，浑浑噩噩的一天。昨晚又熬夜了，早上十点过起床，洗漱后，继续完善markdown。11:30去食堂吃午饭，不得不说，今天二期食堂凉菜那儿番茄的颜色看起来不太健康，有点偏黄，口感也不大好。本打算午休半小时，但一直睡到下午三点过，可能是这段时间没有休息好，有点遭不住。醒后，啥也不想干就想躺在床上。来到图书馆，已近4点，继续整理指令系统，学完指令格式设计，在写博客时，要在文章中插入一些图片(不就是插入
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-25 19:49" pubdate>
+              2023-11-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%97%A5%E8%AE%B0/" class="category-chain-item">日记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/24/2023-11-24/" target="_self">
+          2023.11.24
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/11/24/2023-11-24/" target="_self">
+        <div>
+          唔，今天感觉也没做啥事，早上将近十点才起床，洗漱完，已经十点半了，索性就不吃早饭。打开电脑继续完善markdown的内容，虽说大部分内容都是照搬官网的，但这种搬运式的学习方式对于我来说挺有用。如果只是一味的看官网上的教程，估计我要不了多久就会失去兴趣。就一直写到差不多11：30。饭后，继续开始搬运，不知不觉写到了1点过。睡完午觉，收拾好书包，去了图书馆。眼看着距离英语考试没几天了，就随手写了一道英
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-24 21:25" pubdate>
+              2023-11-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%97%A5%E8%AE%B0/" class="category-chain-item">日记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" target="_self">
+          第五章 指令系统 知识点
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" target="_self">
+        <div>
+          什么是指令？  计算机能直接识别、执行的操作命令(机器指令)。 冯诺依曼结构计算机“程序控制”原理实现的载体。 软、硬件界面和程序员操作计算机硬件的接口。 硬件设计的依据和软件设计的基础，直接影响计算机系统的性能。  什么是指令系统？ 一台计算机或处理器能够识别和执行的所有计算机指令的集合。CPU通过执行一系列机器指令来完成各种计算和控制任务。指令系统通常分为两种类型:精简指令系统计算机(RISC
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-24 16:12" pubdate>
+              2023-11-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" class="category-chain-item">计算机组成原理</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/24/markdown/" target="_self">
+          markdown
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/11/24/markdown/" target="_self">
+        <div>
+          官方教程 1.标题语法创建标题时，在单词或短语前添加（#），（#）的数量代表标题的级别。例如，两个#表示创建一个二级标题。 2.段落语法使用空白行将一行或多行文本进行分隔。注意：不能使用空格和制表符缩进段落。 3.换行语法在一行的末尾添加两个或多个空格，然后按回车键，即可创建一个换行。（但是直接回车也能够换行） 4.强调语法通过将文本设置为粗体或斜体来强调其重要性。 (1).粗体(Bold)在单词
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-24 11:09" pubdate>
+              2023-11-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/markdown/" class="category-chain-item">markdown</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/24/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" target="_self">
+          第三章 处理机调度与死锁
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/11/24/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" target="_self">
+        <div>
+          3.1处理机调度
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-24 11:03" pubdate>
+              2023-11-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="category-chain-item">操作系统</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/23/%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8hexo/" target="_self">
+          hexo
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/11/23/%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8hexo/" target="_self">
+        <div>
+          !!!自用!!!有很多地方还没搞懂。    https://www.githubstatus.com 创建新文章1$   hexo new [layout] &lt;title&gt;  三种默认布局post：默认的文章布局。常使用此布局page：用于创建独立的页面，通常不包含时间戳或归档信息，而是作为站点的独立页面存在（不太了解此布局，还未使用过该布局。后续补充）draft：暂时不想发布的草稿文
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-23 22:50" pubdate>
+              2023-11-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/hexo/" class="category-chain-item">hexo</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/11/23/2023-11-23/" target="_self">
+          2023.11.23
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/11/23/2023-11-23/" target="_self">
+        <div>
+          芜湖，晚上回去再写2023.11.24(补)：敲，写不了一点，不写了。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-23 21:19" pubdate>
+              2023-11-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%97%A5%E8%AE%B0/" class="category-chain-item">日记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
 
-<script src="/js/script.js"></script>
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
 
-  </div>
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
 </body>
 </html>
