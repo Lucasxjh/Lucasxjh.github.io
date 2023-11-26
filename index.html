@@ -73,6 +73,105 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-第六章中央处理器" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" class="article-date">
+  <time class="dt-published" datetime="2023-11-26T03:08:02.000Z" itemprop="datePublished">2023-11-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/">第六章中央处理器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="6-1CPU的组成与功能"><a href="#6-1CPU的组成与功能" class="headerlink" title="6.1CPU的组成与功能"></a>6.1CPU的组成与功能</h2><h3 id="1-CPU概述"><a href="#1-CPU概述" class="headerlink" title="1.CPU概述"></a>1.CPU概述</h3><p>计算机硬件体系架构遵循<strong>冯诺依曼计算机的基本原理</strong></p>
+<ul>
+<li>冯诺依曼计算机的主要功能部件<ul>
+<li>运算器、控制器、存储器、输入和输出设备。</li>
+</ul>
+</li>
+<li>冯诺依曼计算机的主要工作原理<ul>
+<li>存储程序和程序控制。</li>
+</ul>
+</li>
+</ul>
+<p>CPU的功能：</p>
+<ul>
+<li>取指令并执行指令的部件</li>
+</ul>
+<h3 id="2-CPU基本组成"><a href="#2-CPU基本组成" class="headerlink" title="2.CPU基本组成"></a>2.CPU基本组成</h3><ul>
+<li>运算器<ul>
+<li>功能：数据加工</li>
+<li>组成：状态寄存器、ALU和通用寄存器</li>
+</ul>
+</li>
+<li>控制器<ul>
+<li>取指令(<strong>Mem[PC++]-&gt;IR</strong>：回顾5.3.1)</li>
+<li>程序执行&#x2F;指令执行<ol>
+<li>指令字-&gt;控制信号序列</li>
+<li>信号序列-&gt;数据通路</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-CPU主要功能"><a href="#3-CPU主要功能" class="headerlink" title="3.CPU主要功能"></a>3.CPU主要功能</h3><ul>
+<li>运算器：<ul>
+<li>数据加工：算术&#x2F;逻辑运算</li>
+</ul>
+</li>
+<li>控制器：<ul>
+<li>程序控制：程序中执行指令顺序控制</li>
+<li>操作控制：将机器指令翻译成执行部件所需的操作控制信号</li>
+<li>时序控制：控制操作信号的产生时间、持续时间</li>
+<li>异常控制：异常处理，外设交互</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-主要寄存器"><a href="#4-主要寄存器" class="headerlink" title="4.主要寄存器"></a>4.主要寄存器</h3><ul>
+<li>PC(Program Counter)程序计数器，必选</li>
+<li>IR(Instruction Register)指令寄存器，可选</li>
+<li>AR(Address Register)地址寄存器，可选</li>
+<li>DR(Data Register)数据缓冲寄存器，可选</li>
+<li>AC(Accumulate Count)累加寄存器，可选</li>
+<li>PSW(Program Status Word)程序状态字，可选</li>
+</ul>
+<h3 id="5-操作控制器"><a href="#5-操作控制器" class="headerlink" title="5.操作控制器"></a>5.操作控制器</h3><p>功能：取指令，将机器指令译码并生成执行部件控制信号序列，建立正确的数据通路，从而完成指令的正确执行。</p>
+<ul>
+<li>硬布线控制器 (时序逻辑型) (硬件实现) (实现较为复杂，从而推出微程序控制器)</li>
+<li>微程序控制器 (存储程序型) (软件实现)</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" data-id="clpeyssen000nmgf5g08kfvch" data-title="第六章中央处理器" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-2023-11-25" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/11/25/2023-11-25/" class="article-date">
@@ -104,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/25/2023-11-25/" data-id="clpe2ucgm0006e0f5hstsg5bs" data-title="2023.11.25" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/25/2023-11-25/" data-id="clpeyssef0004mgf549skgpe3" data-title="2023.11.25" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -147,7 +246,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/24/2023-11-24/" data-id="clpe2ucgl0004e0f5dnvo8u12" data-title="2023.11.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/24/2023-11-24/" data-id="clpeyssec0002mgf52fbnek7o" data-title="2023.11.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -391,7 +490,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" data-id="clpe2ucgp0009e0f50fub9yft" data-title="第五章 指令系统 知识点" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/24/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" data-id="clpeyssek000cmgf53g2o4v9x" data-title="第五章 指令系统 知识点" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -575,7 +674,7 @@
 <p>预览效果：<br>这是一个链接 <a target="_blank" rel="noopener" href="https://markdown.com.cn/" title="最好的markdown教程">Markdown语法</a>。</p>
 <h3 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h3><p>使用尖括号(&lt;&gt;)可以很方便地把URL或者email地址变成可点击地链接。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://narkdown.com.cn&gt;</span><br><span class="line">&lt;fake@example.com&gt;</span><br></pre></td></tr></table></figure>
-<p>预览效果：<br><a target="_blank" rel="noopener" href="https://narkdown.com.cn/">https://narkdown.com.cn</a><br><a href="mailto:&#102;&#97;&#x6b;&#x65;&#x40;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#109;">&#102;&#97;&#x6b;&#x65;&#x40;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#109;</a></p>
+<p>预览效果：<br><a target="_blank" rel="noopener" href="https://narkdown.com.cn/">https://narkdown.com.cn</a><br><a href="mailto:&#102;&#x61;&#x6b;&#101;&#64;&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;">&#102;&#x61;&#x6b;&#101;&#64;&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;</a></p>
 <h3 id="带格式化地链接"><a href="#带格式化地链接" class="headerlink" title="带格式化地链接"></a>带格式化地链接</h3><p>强调链接，在链接语法前后增加星号。若要将链接表示为代码，需在方括号中添加反引号。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I love supporting the **[EFF](https://eff.org)**.</span><br><span class="line">This is the *[Markdown Guide](https://www.markdownguide.org)*.</span><br><span class="line">See the section on [`code`](#code).</span><br></pre></td></tr></table></figure>
 <p>预览效果：<br>I love supporting the <strong><a target="_blank" rel="noopener" href="https://eff.org/">EFF</a></strong>.<br>This is the <em><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown Guide</a></em>.<br>See the section on <a href="#code"><code>code</code></a>.</p>
@@ -592,7 +691,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/24/markdown/" data-id="clpe2ucgm0005e0f5bq0mc5uw" data-title="markdown" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/24/markdown/" data-id="clpeysseg0006mgf5hvsm2pjr" data-title="markdown" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -634,7 +733,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/24/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-id="clpe2ucgt000je0f54ys9h04a" data-title="第三章 处理机调度与死锁" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/24/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-id="clpeyssej0009mgf5a60chvns" data-title="第三章 处理机调度与死锁" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -689,7 +788,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/23/%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8hexo/" data-id="clpe2ucgo0008e0f5f2jx2tet" data-title="hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/23/%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8hexo/" data-id="clpeyssei0008mgf55e0i9zm6" data-title="hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -732,7 +831,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/23/2023-11-23/" data-id="clpe2ucgf0001e0f5f1kp6oqb" data-title="2023.11.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/23/2023-11-23/" data-id="clpeysse90001mgf5hoga6f30" data-title="2023.11.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -783,7 +882,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/23/hello-world/" data-id="clpe2ucgi0002e0f5gsi92obr" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/23/hello-world/" data-id="clpeyssef0005mgf5fu0d4yrd" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -833,6 +932,10 @@
       <ul>
         
           <li>
+            <a href="/2023/11/26/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/">第六章中央处理器</a>
+          </li>
+        
+          <li>
             <a href="/2023/11/25/2023-11-25/">2023.11.25</a>
           </li>
         
@@ -846,10 +949,6 @@
         
           <li>
             <a href="/2023/11/24/markdown/">markdown</a>
-          </li>
-        
-          <li>
-            <a href="/2023/11/24/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/">第三章 处理机调度与死锁</a>
           </li>
         
       </ul>
