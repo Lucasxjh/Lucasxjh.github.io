@@ -16,21 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="作息：00：20 - 07：10 日程： 08：10 - 09：45 上课 09：45 - 11：00 思政 11：00 - 14：30 休息 14：30 - 17：00 《人类简史》 17：00 - 19：10 娱乐 19：10 - 21：35 上课 21：35 - 23：00 娱乐">
+    <meta name="description" content="什么是哈希表(散列表查找)？ 在记录的存储位置和它的关键字之间建立一个确定的对应关系f，使得每个关键字key对应一个存储位置f(key)。 简单说，就是将数据存储的位置与数据本身建立某种关系f，使得我们可以通过数据本身找到数据储存位置。 对应关系f称为散列函数(哈希函数)。 采用散列技术将记录存储在一块连续的存储空间中，这块连续存储空间称为散列表或哈希表。  为什么要引入哈希表？ 在顺序表和有序表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2023.11.30">
-<meta property="og:url" content="http://example.com/2023/11/30/2023-11-30/index.html">
+<meta property="og:title" content="哈希表">
+<meta property="og:url" content="http://example.com/2023/12/01/%E5%93%88%E5%B8%8C%E8%A1%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="作息：00：20 - 07：10 日程： 08：10 - 09：45 上课 09：45 - 11：00 思政 11：00 - 14：30 休息 14：30 - 17：00 《人类简史》 17：00 - 19：10 娱乐 19：10 - 21：35 上课 21：35 - 23：00 娱乐">
+<meta property="og:description" content="什么是哈希表(散列表查找)？ 在记录的存储位置和它的关键字之间建立一个确定的对应关系f，使得每个关键字key对应一个存储位置f(key)。 简单说，就是将数据存储的位置与数据本身建立某种关系f，使得我们可以通过数据本身找到数据储存位置。 对应关系f称为散列函数(哈希函数)。 采用散列技术将记录存储在一块连续的存储空间中，这块连续存储空间称为散列表或哈希表。  为什么要引入哈希表？ 在顺序表和有序表">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-11-30T15:13:16.000Z">
-<meta property="article:modified_time" content="2023-11-30T15:16:15.665Z">
+<meta property="article:published_time" content="2023-12-01T09:55:39.000Z">
+<meta property="article:modified_time" content="2023-12-01T12:38:28.837Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>2023.11.30 - Hexo</title>
+  <title>哈希表 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="2023.11.30"></span>
+            <span id="subtitle" data-typed-text="哈希表"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-30 23:13" pubdate>
-          November 30, 2023 pm
+        <time datetime="2023-12-01 17:55" pubdate>
+          December 1, 2023 pm
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          112 words
+          1.1k words
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          1 mins
+          9 mins
         
       </span>
     
@@ -267,22 +267,70 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">2023.11.30</h1>
+            <h1 id="seo-header">哈希表</h1>
             
             
               <div class="markdown-body">
                 
-                <ul>
-<li>作息：00：20 - 07：10</li>
-<li>日程：<ol>
-<li>08：10 - 09：45 上课</li>
-<li>09：45 - 11：00 思政</li>
-<li>11：00 - 14：30 休息</li>
-<li>14：30 - 17：00 《人类简史》</li>
-<li>17：00 - 19：10 娱乐</li>
-<li>19：10 - 21：35 上课</li>
-<li>21：35 - 23：00 娱乐</li>
+                <h2 id="什么是哈希表-散列表查找-？"><a href="#什么是哈希表-散列表查找-？" class="headerlink" title="什么是哈希表(散列表查找)？"></a>什么是哈希表(散列表查找)？</h2><ul>
+<li>在记录的存储位置和它的关键字之间建立一个确定的对应关系f，使得每个关键字key对应一个存储位置f(key)。</li>
+<li>简单说，就是将数据存储的位置与数据本身建立某种关系f，使得我们可以通过数据本身找到数据储存位置。</li>
+<li>对应关系f称为散列函数(哈希函数)。</li>
+<li>采用散列技术将记录存储在一块连续的存储空间中，这块连续存储空间称为散列表或哈希表。</li>
+</ul>
+<h2 id="为什么要引入哈希表？"><a href="#为什么要引入哈希表？" class="headerlink" title="为什么要引入哈希表？"></a>为什么要引入哈希表？</h2><ul>
+<li>在顺序表和有序表中进行查找时，都不可避免要进行”比较”，从而可能提高算法的时间复杂度，因此需要一种可以直接通过关键字key来查找记录的内存存储位置的方法。</li>
+</ul>
+<h2 id="散列表查找的步骤"><a href="#散列表查找的步骤" class="headerlink" title="散列表查找的步骤"></a>散列表查找的步骤</h2><ol>
+<li>存储时：通过同样的散列函数计算记录的散列地址，并按此散列地址存储该记录。</li>
+<li>查找时：通过同样的散列函数计算记录的散列地址，按此散列地址访问该记录。</li>
 </ol>
+<ul>
+<li><strong>散列技术的适用情况</strong>：<ul>
+<li>散列技术既是一种存储方法，也是一种查找方法。散列技术的记录之间没有逻辑关系，其只与关键字有关联。故，<strong>散列技术最适合求解的问题是查找与给定值相等的情况</strong>，不适用与一个关键字对应很多记录的情况和范围查找。</li>
+</ul>
+</li>
+</ul>
+<h2 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h2><ul>
+<li>理想情况下，每个关键字通过散列函数计算出的地址都是不一样的。但现实中存在<strong>两个关键字”key1 !&#x3D; key2”，但却有”f(key1) &#x3D; f(key2)”的情况</strong>，这种现象称为1冲突，并把”key1”，”key2”称为这个散列函数的同义词。</li>
+</ul>
+<h2 id="处理散列冲突的方法"><a href="#处理散列冲突的方法" class="headerlink" title="处理散列冲突的方法"></a>处理散列冲突的方法</h2><h2 id="散列函数的构造方法"><a href="#散列函数的构造方法" class="headerlink" title="散列函数的构造方法"></a>散列函数的构造方法</h2><ul>
+<li>什么是好的构造函数？<ol>
+<li>计算简单</li>
+<li>散列地址分布均匀</li>
+</ol>
+</li>
+<li>直接地址法<ul>
+<li>取关键字的某个线性函数值为散列地址</li>
+<li>优点：简单、均匀，不会产生冲突</li>
+<li>缺点：需事先知道关键字的分布情况，适合查找表较小且连续的情况</li>
+<li>此方法虽简单，但不常用</li>
+</ul>
+</li>
+<li>数字分析法<ul>
+<li>适用于关键字位数较多的情况，从关键字中抽取一部分，根据情况可对抽取的数据进行反转、右环位移、左环位移或叠加等处理来避免冲突</li>
+<li>适合处理关键字位数比较多的情况，事先知道关键字的分布，且关键字的若干位分布均匀</li>
+</ul>
+</li>
+<li>平方取中法<ul>
+<li>取关键字的平方的中间几位</li>
+<li>适用于不知道关键字的分布，而位数不多的情况</li>
+</ul>
+</li>
+<li>折叠法<ul>
+<li>将关键字从左到右分割成位数相等的几部分(最后一位位数不够可以短一些)，然后将这几部分叠加求和，并按列表表长，取最后几位作为散列地址</li>
+<li>事先不需知道关键字的分布，适合关键字位数较多的情况</li>
+</ul>
+</li>
+<li>除留余数法<ul>
+<li>f(key) &#x3D; key mod p(p &lt;&#x3D; m) m为散列表长，p一般小于或等于表长(最好接近m)的最小质数或不包含小于20质因数的合数</li>
+<li>**最常见的构造散列函数的方法</li>
+</ul>
+</li>
+<li>随机数法<ul>
+<li>选择一个随机数，取关键字的随机函数值作为它的散列地址</li>
+<li>适用于关键字长度不等时</li>
+</ul>
 </li>
 </ul>
 
@@ -303,7 +351,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%97%A5%E8%AE%B0/" class="category-chain-item">日记</a>
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="category-chain-item">数据结构</a>
   
   
 
@@ -323,8 +371,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>2023.11.30</div>
-      <div>http://example.com/2023/11/30/2023-11-30/</div>
+      <div>哈希表</div>
+      <div>http://example.com/2023/12/01/哈希表/</div>
     </div>
     <div class="license-meta">
       
@@ -336,7 +384,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>November 30, 2023</div>
+          <div>December 1, 2023</div>
         </div>
       
       
@@ -368,18 +416,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/01/%E5%93%88%E5%B8%8C%E8%A1%A8/" title="哈希表">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">哈希表</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/29/2023-11-29/" title="2023.11.29">
-                        <span class="hidden-mobile">2023.11.29</span>
+                      <a href="/2023/11/30/2023-11-30/" title="2023.11.30">
+                        <span class="hidden-mobile">2023.11.30</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
