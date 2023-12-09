@@ -16,21 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="leetcode：389位运算 KMP算法">
+    <meta name="description" content="树的定义 一种非线性的数据结构，其由节点（Node）和边（Edge）组成。树的基本思想是将数据组织成具有层次结构的树形图，其中每个节点都有一个父亲节点（除了根结点）和零个或多个子节点，子树间不能相交。 树的一些重要概念和特性： 根节点（Root）：树的顶层结点，没有父亲点的节点 结点（Node）：包含数据元素的基本单位。节点可以由零个或多个子节点，但最多只有一个父亲节点 父节点（Parent）和子">
 <meta property="og:type" content="article">
-<meta property="og:title" content="清单">
-<meta property="og:url" content="http://example.com/2023/12/06/%E6%B8%85%E5%8D%95/index.html">
+<meta property="og:title" content="树">
+<meta property="og:url" content="http://example.com/2023/12/09/%E6%A0%91/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="leetcode：389位运算 KMP算法">
+<meta property="og:description" content="树的定义 一种非线性的数据结构，其由节点（Node）和边（Edge）组成。树的基本思想是将数据组织成具有层次结构的树形图，其中每个节点都有一个父亲节点（除了根结点）和零个或多个子节点，子树间不能相交。 树的一些重要概念和特性： 根节点（Root）：树的顶层结点，没有父亲点的节点 结点（Node）：包含数据元素的基本单位。节点可以由零个或多个子节点，但最多只有一个父亲节点 父节点（Parent）和子">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-06T13:02:45.000Z">
-<meta property="article:modified_time" content="2023-12-08T08:00:47.265Z">
+<meta property="article:published_time" content="2023-12-09T03:19:31.000Z">
+<meta property="article:modified_time" content="2023-12-09T06:32:56.303Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>清单 - Hexo</title>
+  <title>树 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="清单"></span>
+            <span id="subtitle" data-typed-text="树"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-06 21:02" pubdate>
-          December 6, 2023 pm
+        <time datetime="2023-12-09 11:19" pubdate>
+          December 9, 2023 am
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          20 words
+          936 words
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          1 mins
+          8 mins
         
       </span>
     
@@ -267,14 +267,48 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">清单</h1>
+            <h1 id="seo-header">树</h1>
             
             
               <div class="markdown-body">
                 
-                <ul>
-<li>leetcode：389位运算</li>
-<li>KMP算法</li>
+                <h2 id="树的定义"><a href="#树的定义" class="headerlink" title="树的定义"></a>树的定义</h2><ul>
+<li>一种非线性的数据结构，其由节点（Node）和边（Edge）组成。树的基本思想是将数据组织成具有层次结构的树形图，其中每个节点都有一个父亲节点（除了根结点）和零个或多个子节点，<strong>子树间不能相交</strong>。</li>
+<li>树的一些重要概念和特性：<ul>
+<li>根节点（Root）：树的顶层结点，没有父亲点的节点</li>
+<li>结点（Node）：包含数据元素的基本单位。节点可以由零个或多个子节点，但最多只有一个父亲节点</li>
+<li>父节点（Parent）和子节点（Child）：每个节点都有一个父节点，除了根节点。一个节点可以有零个或多个子节点</li>
+<li>叶子节点（Leaf）：没有子节点的节点，也叫终端节点</li>
+<li>节点的层次：从根节点开始定义，根为第一层，根的孩子为第二层，以此类推</li>
+<li>深度（Depth）：树中节点的最大层次，也称为高度</li>
+<li>节点的度：节点拥有的子树的个数</li>
+<li>树的度（Degree）：树内个节点的度的最大值</li>
+</ul>
+</li>
+<li>有序树：树中节点的各子树看成从左至右是有次序的，不能互换的</li>
+<li>森林（Forest）：m课互不相交的树的集合</li>
+</ul>
+<h2 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h2><ul>
+<li><p>双亲表示法：</p>
+<ul>
+<li>利用每个节点（除了根节点）都有且仅有一个双亲的特性。</li>
+<li>假设以一组连续空间存储树的节点，在每个节点中，附设一个指示器指示其双亲结点在数组中的位置。结点结构：<code>data parent</code>  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> MAX_TREE_SIZE 100</span><br><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">PTNode</span>       //结点结构</span><br><span class="hljs-class">&#123;</span><br>    <span class="hljs-type">int</span> data;<br>    <span class="hljs-type">int</span> parent;<br>&#125; PTNode;<br><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>              //树结构</span><br><span class="hljs-class">&#123;</span><br>    PTNode nodes[MAX_TREE_SIZE];<br>    <span class="hljs-type">int</span> r, n;               <span class="hljs-comment">//根的位置，和节点数</span><br>&#125;<br></code></pre></td></tr></table></figure>
+  由于根节点没有双亲，故规定根节点的位置域设置为<code>-1</code><br>  此方法可以容易找到节点的双亲，但需遍历整个结构才能找到其孩子。故可以再添加一个<code>firstchild</code>指向该节点的最左边的孩子。</li>
+</ul>
+</li>
+<li><p>孩子表示法</p>
+<ul>
+<li>多重链表表示法：每个节点有多个指针域，每个指针指向一颗子树的根节点<ol>
+<li>每个节点的指针域个数相同，当每个节点的孩子个数相差较大时，容易造成空间的浪费</li>
+<li>按照每个节点的孩子个数来分配指针域的个数。虽然没有造成空间的浪费，但由于每个节点的结构不同，在运算上会带来时间上的损耗</li>
+</ol>
+</li>
+<li>孩子表示法<ul>
+<li>把每个孩子节点排列起来，以单链表作存储结构。</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
                 
@@ -294,7 +328,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%B8%85%E5%8D%95/" class="category-chain-item">清单</a>
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="category-chain-item">数据结构</a>
   
   
 
@@ -314,8 +348,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>清单</div>
-      <div>http://example.com/2023/12/06/清单/</div>
+      <div>树</div>
+      <div>http://example.com/2023/12/09/树/</div>
     </div>
     <div class="license-meta">
       
@@ -327,7 +361,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>December 6, 2023</div>
+          <div>December 9, 2023</div>
         </div>
       
       
@@ -359,9 +393,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/06/%E8%8B%B1%E8%AF%AD/" title="单词">
+                      <a href="/2023/12/09/dots-and-boxes-cpp/" title="dots_and_boxes_cpp">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">单词</span>
+                        <span class="hidden-mobile">dots_and_boxes_cpp</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -369,8 +403,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/06/dots-and-boxes/" title="dots_and_boxes">
-                        <span class="hidden-mobile">dots_and_boxes</span>
+                      <a href="/2023/12/07/%E5%88%B0%E8%BE%BE%E9%A6%96%E9%83%BD%E7%9A%84%E6%9C%80%E5%B0%91%E6%B2%B9%E8%80%97/" title="到达首都的最少油耗">
+                        <span class="hidden-mobile">到达首都的最少油耗</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

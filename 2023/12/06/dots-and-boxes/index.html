@@ -24,7 +24,7 @@
 <meta property="og:description" content="自用 一 botzone：AI对战平台  了解Windows消息处理机制  Windows API GUI相关API  在Windows API中程序入口点不是main而是WinMain(wWinMain宽字符体版本：用两个字节表示一个字符)。 其包含的参数： Instance实例：静态程序exe打开后所运行的窗口 handle句柄：对于每一个实例都有对应的handle，类似于int，用唯一的整数">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-12-06T11:06:43.000Z">
-<meta property="article:modified_time" content="2023-12-07T09:31:42.848Z">
+<meta property="article:modified_time" content="2023-12-09T06:06:08.736Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          811 words
+          1.2k words
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          7 mins
+          11 mins
         
       </span>
     
@@ -318,16 +318,26 @@
 <li><p>在WndProc中绘制棋盘</p>
 <ul>
 <li>创建”画布”：<code>HDC mdc = CreateCompatibleDC(hdc);</code>。</li>
-<li>引入棋盘(外部图片)<code>HBITMAP hbitmap = (HBITMAP)LoadImage(NULL, &quot;文件名及后缀&quot;, IMAGE_BITMAP, cx, cx, LR_LOADFROMFILE)</code>。</li>
+<li>引入棋盘(外部图片)<code>HBITMAP hbitmap = (HBITMAP)LoadImage(NULL, &quot;文件名及后缀&quot;, IMAGE_BITMAP, cx, cx, LR_LOADFROMFILE)</code>。(570x570，19x19)</li>
 <li>使用<code>SelectObject(mdc, hbitmap)</code>将画布<code>mdc</code>与该图片<code>hbitmap</code>相关联。- 使用<code>BitBlt(hdc, x, y, cx, cy, mdc, 0, 0, SRCCOPY)</code>进行显示，x，y为打印在画布的位置。</li>
 </ul>
 </li>
 <li><p>落子</p>
 <ul>
 <li>定义一个全局二维数组，记录落子的逻辑位置(而非像素位置)。</li>
-<li>增加一个消息<code>case WM_LBUTTONDOWN</code>(鼠标左键点击消息)，创建下x，y表示坐标，用<code>x = LOWORD(lParam)</code>，<code>y = HIWORD(lParam)</code>使x，y获取像素坐标</li>
+<li>增加一个消息<code>case WM_LBUTTONDOWN</code>(鼠标左键点击消息)，创建下x，y表示坐标，用<code>x = LOWORD(lParam)</code>，<code>y = HIWORD(lParam)</code>使x，y获取像素坐标。</li>
+<li>添加<code>if</code>语句判断落子是否合法，并完成像素坐标到逻辑坐标的映射。</li>
+<li>使用<code>InvalidateRect(hWnd, &amp;rc, TRUE)</code>，使落子区域被重绘。<code>hWnd</code>为重绘的窗口，<code>rc</code>为矩形的结构体。</li>
+<li>创建画笔<code>HPNE hpne = CreatePen(0, 1, RGB(0, 0, 0))</code>，创建画刷<code>HBRUSH hbrush = CreateSolidBrush(RHB(0, 0, 0))</code>，并用<code>SelectObject(mdc, )</code>将画笔和画刷选入设备环境</li>
+<li>使用<code>Rectangle(mdc, left, top, right, bottom)</code>绘制矩形</li>
 </ul>
-<p>  <code>二 26：49</code></p>
+</li>
+<li><p>实现”落子交替”</p>
+<ul>
+<li>全局定义一个交替数，和<code>computer_think</code>函数</li>
+<li>引入多线程，用<code>thread</code>实现，引入其头文件<code>&lt;thread&gt;</code>。用<code>thread thr(computer_think)</code> 创建一个名为<code>thr</code>子线程，并用<code>thr.detach()</code>实现主线程和子线程的同步运行</li>
+</ul>
+<p>  <code>三 27：35</code></p>
 </li>
 </ul>
 
@@ -337,6 +347,27 @@
             <hr/>
             <div>
               <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%87%AA%E7%94%A8/" class="category-chain-item">自用</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
   
   
 </div>
