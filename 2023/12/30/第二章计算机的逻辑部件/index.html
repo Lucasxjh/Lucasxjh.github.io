@@ -16,21 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.1冯诺依曼结构计算机工作原理机层次结构分析 冯诺依曼计算机的工作原理 存储程序：将程序存放在计算机的存储器中 程序控制：按指令地址访问存储器取出指令，经译码依次产生指令执行所需的控制信号，实现对计算机的控制，完成指令的功能   冯诺依曼计算机的组成（硬件+软件） 硬件系统： 主机：CPU（运算器，控制器），内存 外设：输入输出设备，外存储器 总线：地址线，数据线，控制线 详解： 运算器：可实现">
+    <meta name="description" content="2.1机器数及特点 三种常见的机器数：原码，补码，反码 负数反码表示时，符号位不变， 原码：表示简单，运算复杂（符号位不参与运算，要设置加法，减法器），零的表示不唯一 反码：表示复杂，运算相对原码简单（符号位参与运算，只需设置加法器，但符号位的进位需加到最低为），零的表示不唯一 补码：表示相对原码复杂，运算简单，零表示唯一    2.2定点与浮点数据表示 定点数：表示范围受到字长的限制 浮点数：把">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一章计算机系统概论">
-<meta property="og:url" content="http://example.com/2023/12/29/%E7%AC%AC%E4%B8%80%E7%AB%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/index.html">
+<meta property="og:title" content="第二章机器数及其特点">
+<meta property="og:url" content="http://example.com/2023/12/30/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E9%80%BB%E8%BE%91%E9%83%A8%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.1冯诺依曼结构计算机工作原理机层次结构分析 冯诺依曼计算机的工作原理 存储程序：将程序存放在计算机的存储器中 程序控制：按指令地址访问存储器取出指令，经译码依次产生指令执行所需的控制信号，实现对计算机的控制，完成指令的功能   冯诺依曼计算机的组成（硬件+软件） 硬件系统： 主机：CPU（运算器，控制器），内存 外设：输入输出设备，外存储器 总线：地址线，数据线，控制线 详解： 运算器：可实现">
+<meta property="og:description" content="2.1机器数及特点 三种常见的机器数：原码，补码，反码 负数反码表示时，符号位不变， 原码：表示简单，运算复杂（符号位不参与运算，要设置加法，减法器），零的表示不唯一 反码：表示复杂，运算相对原码简单（符号位参与运算，只需设置加法器，但符号位的进位需加到最低为），零的表示不唯一 补码：表示相对原码复杂，运算简单，零表示唯一    2.2定点与浮点数据表示 定点数：表示范围受到字长的限制 浮点数：把">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-29T06:45:06.000Z">
-<meta property="article:modified_time" content="2023-12-29T08:44:31.755Z">
+<meta property="article:published_time" content="2023-12-30T06:24:31.000Z">
+<meta property="article:modified_time" content="2023-12-30T10:36:31.789Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>第一章计算机系统概论 - Hexo</title>
+  <title>第二章机器数及其特点 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="第一章计算机系统概论"></span>
+            <span id="subtitle" data-typed-text="第二章机器数及其特点"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-29 14:45" pubdate>
-          December 29, 2023 pm
+        <time datetime="2023-12-30 14:24" pubdate>
+          December 30, 2023 pm
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.4k words
+          895 words
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          21 mins
+          8 mins
         
       </span>
     
@@ -267,146 +267,63 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">第一章计算机系统概论</h1>
+            <h1 id="seo-header">第二章机器数及其特点</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="1-1冯诺依曼结构计算机工作原理机层次结构分析"><a href="#1-1冯诺依曼结构计算机工作原理机层次结构分析" class="headerlink" title="1.1冯诺依曼结构计算机工作原理机层次结构分析"></a>1.1冯诺依曼结构计算机工作原理机层次结构分析</h2><ul>
-<li>冯诺依曼计算机的工作原理<ul>
-<li>存储程序：将程序存放在计算机的存储器中</li>
-<li>程序控制：按<code>指令地址</code>访问存储器取出指令，经译码依次产生指令执行所需的控制信号，实现对计算机的控制，完成指令的功能</li>
-</ul>
-</li>
-<li>冯诺依曼计算机的组成（硬件+软件）<ol>
-<li>硬件系统：<ul>
-<li>主机：CPU（运算器，控制器），内存</li>
-<li>外设：输入输出设备，外存储器</li>
-<li>总线：地址线，数据线，控制线</li>
-<li>详解：<ul>
-<li>运算器：可实现算术运算和逻辑运算。基本结构包括：ALU，寄存器和链接通路</li>
-<li>控制器：产生指令执行过程所需要的所有控制信号，控制相关功能部件执行相应的操作。控制信号的形式：电平信号和脉冲信号。产生控制信号的依据：指令，状态和时序。控制信号的产生方式：微程序，硬布线</li>
-<li>存储器：基本结构：地址总线，数据总线和存储体。功能：存储原程序，原数据，运算中间结果。工作模式：读&#x2F;写。工作原理：按地址访问，读&#x2F;写数据。存储器容量与地址线数量的关系：1K-&gt;10, 1M-&gt;20, 1G-&gt;30。</li>
-<li>输入&#x2F;输出设备：</li>
+                <h2 id="2-1机器数及特点"><a href="#2-1机器数及特点" class="headerlink" title="2.1机器数及特点"></a>2.1机器数及特点</h2><ul>
+<li>三种常见的机器数：原码，补码，反码<ul>
+<li>负数反码表示时，符号位不变，</li>
+<li>原码：表示简单，运算复杂（符号位不参与运算，要设置加法，减法器），零的表示不唯一</li>
+<li>反码：表示复杂，运算相对原码简单（符号位参与运算，只需设置加法器，但<code>符号位的进位需加到最低为</code>），零的表示不唯一</li>
+<li>补码：表示相对原码复杂，运算简单，零表示唯一</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>软件系统：<ul>
-<li>对软件的理解：可运行的思想和内容的数字化<ul>
-<li>思想：算法，规律，方法–程序表达</li>
-<li>内容：图形，图像，数据，声音，文字等被处理的对象</li>
-</ul>
-</li>
-<li>软件的表现形式：程序和数据</li>
-<li>软件的核心：算法</li>
-<li>软件分类：系统软件（操作系统，网络系统，编译系统），支持软件（开发工具，界面工具），应用软件（字处理软件，游戏软件等）</li>
-</ul>
-</li>
-<li>硬件和软件间的关系<ol>
-<li>相互依存：硬件是软件运行的基础，软件的正常运行是硬件发挥作用的重要途经。计算机系统必须配备完善的软件系统才能正常工作，且应充分发挥其硬件功能</li>
-<li>逻辑等效性：某些功能既可由硬件实现，也可由软件实现</li>
-<li>协同发展：软件随硬件技术的迅速发展儿发展，而软件的不断发展与完善又促进硬件的更新，两者密切地交织发展，缺一不可</li>
+<h2 id="2-2定点与浮点数据表示"><a href="#2-2定点与浮点数据表示" class="headerlink" title="2.2定点与浮点数据表示"></a>2.2定点与浮点数据表示</h2><ul>
+<li>定点数：表示范围受到字长的限制</li>
+<li>浮点数：把数的范围和精度分别进行表示</li>
+<li>IEEE754格式<ul>
+<li>单精度（32位）：阶码8位，尾数24位（内含1位符号位）</li>
+<li>双精度（64位）：阶码11位，尾数53位（内含1位符号位）</li>
+<li>阶码采用移码（单精度127，双精度1023），尾数采用原码</li>
+<li>尾数形式：1.XXXXXX，其中尾数部分保存.XXXXXX（1被隐藏）</li>
+<li>表示的数据<ol>
+<li>E&#x3D;0,M&#x3D;0：表示机器零</li>
+<li>E&#x3D;0,M!&#x3D;0：非规格化浮点数</li>
+<li>1 &lt;&#x3D; E &lt;&#x3D; 254：规格化的浮点数</li>
+<li>E&#x3D;255,M&#x3D;0：无穷大的数</li>
+<li>E&#x3D;255,M!&#x3D;0：表示一个非数值</li>
 </ol>
 </li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3数据校验的基本原理"><a href="#2-3数据校验的基本原理" class="headerlink" title="2.3数据校验的基本原理"></a>2.3数据校验的基本原理</h2><ul>
+<li>为什么要检验：数据在被处理，传输，存储过程中可能出现错误</li>
+<li>校验的基本原理<ul>
+<li>增加冗余码（校验位）</li>
+<li>码距：同一编码中，任意两个合法编码之间不同二进制位数的<code>最小值</code>，校验码中增加冗余项的目的就是为了增大码距</li>
+<li>码距与检错和纠错能力的关系：<ol>
+<li>码距&gt;&#x3D;e + 1;可检错e个错误</li>
+<li>码距&gt;&#x3D;2t + 1;可纠正t个错误</li>
+<li>码距&gt;&#x3D;e + t + 1; (e &gt;&#x3D; t)可纠正t个错误，同时检测e个错误</li>
 </ol>
 </li>
-<li>计算机地层次结构<ul>
-<li>应用程序，高级语言，汇编语言，操作系统，指令集架构层，微代码层，硬件逻辑层（从上到下）</li>
-<li>不同用户处在不同层次，不同层次具有不同属性，不同层次使用不同的工具，不同层次代码的效率不同</li>
-<li>透明性概念：如硬件的特性对C语言程序设计者而言具有透明性</li>
-<li>系统观：当硬件结构发生变化时要想到可能对软件产生影响，不同类型的软件对硬件有不同的要求</li>
-<li>软硬件的分界线：指令集架构层。分界线即软硬件的接口，是指令操作硬件的接口。指令格式及指令的设计与硬件关联</li>
 </ul>
 </li>
 </ul>
-<h2 id="1-2计算机系统性能的评价"><a href="#1-2计算机系统性能的评价" class="headerlink" title="1.2计算机系统性能的评价"></a>1.2计算机系统性能的评价</h2><ol>
-<li>非时间指标：<ol>
-<li>机器字长：指机器一次能处理的二进制位数<ul>
-<li>由加法器，寄存器的位数决定</li>
-<li>一般与内部寄存器的位数相等</li>
-<li>字长越长，表示数据范围越大，精确度越高</li>
-<li>目前常见的有32位和64位</li>
+<h2 id="2-4奇偶校验"><a href="#2-4奇偶校验" class="headerlink" title="2.4奇偶校验"></a>2.4奇偶校验</h2><ul>
+<li>奇偶校验基本原理：增加冗余码，根据有效信息计算校验信息位，使校验码（数据+1位校验信息）中1的个数满足奇&#x2F;偶校验的要求。</li>
+<li>奇偶校验特点：编码与检错简单，编码效率高，<code>不能检测偶数位错误</code>，不具有纠错能力</li>
+<li>改进的奇偶校验：双向奇偶校验，方块校验，垂直水平校验</li>
+<li>哪些场合使用奇偶校验；</li>
 </ul>
-</li>
-<li>总线宽度：数据总线一次能并行传送的最大信息位数<ul>
-<li>一般指运算器与存储器之间的数据总线位数</li>
-<li>有些计算机内部与外部数据总线宽度不一致</li>
+<h2 id="2-5CRC校验及其实现"><a href="#2-5CRC校验及其实现" class="headerlink" title="2.5CRC校验及其实现"></a>2.5CRC校验及其实现</h2><ul>
+<li>有效信息（k位）校验信息（r位）：N &#x3D; k + r &lt;&#x3D; 2 ^ r - 1</li>
+<li>生成多项式</li>
 </ul>
-</li>
-<li>主存容量与存储带宽<ul>
-<li>主存容量：一台计算机主存所包含的存储单元总数</li>
-<li>存储带宽：单位时间与主存交换的二进制信息量，常用单位B&#x2F;s（字节&#x2F;秒）。（影响存储带宽的指标包括数据位宽和数据传输速率）</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>时间指标：<ol>
-<li>主频f&#x2F;时钟周期T，外频，倍频<ul>
-<li>主频：CPU内核工作的时钟频率，即CPU内数字脉冲信号振荡的速率，与CPU实际的运算能力之间不是唯一的，直接关系</li>
-<li>时钟周期：（主频的倒数）也称节拍周期，是计算机中最基本的，最小的时间单位。在一个时钟周期内，CPU仅完成一个最基本的动作</li>
-<li>主频与时钟周期的关系：互为倒数（f &#x3D; 100MHz 时 T &#x3D; 10ns, f &#x3D; 1GHz 时 T &#x3D; 1ns）</li>
-<li>外频：CPU（内存）与主板之间同步的时钟频率</li>
-<li>倍频：CPU主频与外频之间的倍数</li>
-<li>主频 &#x3D; 外频 * 倍频</li>
-</ul>
-</li>
-<li>CPI：<ul>
-<li>执行一条指令（平均）所需的时钟周期数（即T周期的个数）</li>
-<li>单条指令CPI，一段程序中所有指令的CPI，指令系统CPI等</li>
-<li>CPI &#x3D; 程序中所有指令的时钟周期数之和 &#x2F; 程序中指令总数</li>
-</ul>
-</li>
-<li>MIPS<ul>
-<li>每秒钟CPU能执行的指令总条数（单位：百万条&#x2F;秒）</li>
-<li>MIPS &#x3D; 指令条数 &#x2F; （执行时间 * 10 ^ 6）</li>
-<li>MIPS &#x3D; 指令条数 &#x2F; (（所有指令CPU时钟周期数之和&#x2F;f）* 10 ^ 6) &#x3D; f &#x2F; (CPI * 10 ^ 6)(全性能公式)</li>
-</ul>
-</li>
-<li>CPU时间<ul>
-<li>执行一段程序所需时间：CPU时间 + I&#x2F;O时间 + 存储访问时间 + 各类排队时延等</li>
-<li>CPU时间 &#x3D; 程序中所有指令的时钟周期数之和 * T</li>
-<li>考虑CPI后的CPU时间：<ul>
-<li>CPU时间 &#x3D; 总指令数 * CPI * 时钟周期时间</li>
-</ul>
-</li>
-<li>考虑MIPS后的CPU时间<ul>
-<li>CPU时间 &#x3D; 指令数量 &#x2F; (MIPS * 10 ^ 6)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>时间指标的应用思考<ul>
-<li>算法，编程语言，编译程序，指令集体系结构均会影响CPI, MIPS, CPU时间</li>
-</ul>
-</li>
-</ol>
-<h2 id="1-3计算机性能测试"><a href="#1-3计算机性能测试" class="headerlink" title="1.3计算机性能测试"></a>1.3计算机性能测试</h2><ol>
-<li>测试的基本原理<ul>
-<li>计算机系统中配置了大量的传感器和寄存器，系统运行的相关参数保存在对于的寄存器中</li>
-<li>测试程序通过读取相应寄存器的值得到系统运行的状况</li>
-<li>通过图形&#x2F;数据方式显示获取的状态数值</li>
-</ul>
-</li>
-</ol>
-<h2 id="课后习题"><a href="#课后习题" class="headerlink" title="课后习题"></a>课后习题</h2><ol>
-<li>说明高级语言，汇编语言和机器语言三者的差别和联系</li>
-<li>计算机硬件由哪几部分组成？各部分的作用是什么？各部分之间是怎样联系的？</li>
-<li>计算机系统可分为哪几个层次？说明各层次的特点及其相互联系</li>
-<li>操作系统的作用是什么？</li>
-<li>如何划分计算机发展的5个阶段（第代~第五代）？当前广泛应用的计算机主要采<br>取哪一代的技术？</li>
-<li>列出通用机、小型机和微型机等计算机的典型机种以及这些计算机的主要应用范围。</li>
-<li>早期的主机系统的主要特点是什么？</li>
-<li>计算机能够普及应用的主要原因是什么？</li>
-<li>冯•诺依曼型计算机的结构特点是什么？</li>
-<li>试用机器语言编写求5个数平均值的程序（自定指令系统）。</li>
-<li>SISD、SIMD和MIMD计算机系统的主要差别是什么？</li>
-<li>什么是局域网、广域网和互联网？试解释IP地址。</li>
-<li>请解释网络中传输信息的两种方式：基带传输和宽带传输。</li>
-<li>请说明制订标准（或协议）对计算机和网络的重要性。</li>
-</ol>
 
                 
               </div>
@@ -445,8 +362,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>第一章计算机系统概论</div>
-      <div>http://example.com/2023/12/29/第一章计算机系统概论/</div>
+      <div>第二章机器数及其特点</div>
+      <div>http://example.com/2023/12/30/第二章计算机的逻辑部件/</div>
     </div>
     <div class="license-meta">
       
@@ -458,7 +375,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>December 29, 2023</div>
+          <div>December 30, 2023</div>
         </div>
       
       
@@ -490,18 +407,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/30/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E9%80%BB%E8%BE%91%E9%83%A8%E4%BB%B6/" title="第二章机器数及其特点">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第二章机器数及其特点</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/28/2023-12-28/" title="20231228">
-                        <span class="hidden-mobile">20231228</span>
+                      <a href="/2023/12/29/%E7%AC%AC%E4%B8%80%E7%AB%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/" title="第一章计算机系统概论">
+                        <span class="hidden-mobile">第一章计算机系统概论</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
