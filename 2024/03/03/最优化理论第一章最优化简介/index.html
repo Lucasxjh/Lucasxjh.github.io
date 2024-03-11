@@ -16,21 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2.1机器数及特点 三种常见的机器数：原码，补码，反码 负数反码表示时，符号位不变， 原码：表示简单，运算复杂（符号位不参与运算，要设置加法，减法器），零的表示不唯一 反码：表示复杂，运算相对原码简单（符号位参与运算，只需设置加法器，但符号位的进位需加到最低为），零的表示不唯一 补码：表示相对原码复杂，运算简单，零表示唯一    2.2定点与浮点数据表示 定点数：表示范围受到字长的限制 浮点数：把">
+    <meta name="description" content="1.1最优化问题概括 最优化问题的一般形式 最优化问题的类型与应用背景 按目标函数、约束函数以及解的性质分类 线性规划：目标函数和约束函数均为线性函数 非线性规划：目标函数和约束函数至少有一个微非线性函数 二次规划：目标函数是二次函数而约束函数是线性函数 非光滑优化：包含非光滑函数的问题 无导数优化：不能直接求导数的问题 整数优化：变量只能取整数的问题 半定规划（广义形式为锥规划）：在线性约束下极">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第二章机器数及其特点">
-<meta property="og:url" content="http://example.com/2023/12/30/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E9%80%BB%E8%BE%91%E9%83%A8%E4%BB%B6/index.html">
+<meta property="og:title" content="第一章最优化简介">
+<meta property="og:url" content="http://example.com/2024/03/03/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%9C%80%E4%BC%98%E5%8C%96%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="2.1机器数及特点 三种常见的机器数：原码，补码，反码 负数反码表示时，符号位不变， 原码：表示简单，运算复杂（符号位不参与运算，要设置加法，减法器），零的表示不唯一 反码：表示复杂，运算相对原码简单（符号位参与运算，只需设置加法器，但符号位的进位需加到最低为），零的表示不唯一 补码：表示相对原码复杂，运算简单，零表示唯一    2.2定点与浮点数据表示 定点数：表示范围受到字长的限制 浮点数：把">
+<meta property="og:description" content="1.1最优化问题概括 最优化问题的一般形式 最优化问题的类型与应用背景 按目标函数、约束函数以及解的性质分类 线性规划：目标函数和约束函数均为线性函数 非线性规划：目标函数和约束函数至少有一个微非线性函数 二次规划：目标函数是二次函数而约束函数是线性函数 非光滑优化：包含非光滑函数的问题 无导数优化：不能直接求导数的问题 整数优化：变量只能取整数的问题 半定规划（广义形式为锥规划）：在线性约束下极">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-30T06:24:31.000Z">
-<meta property="article:modified_time" content="2023-12-30T10:36:31.789Z">
+<meta property="article:published_time" content="2024-03-03T07:10:12.000Z">
+<meta property="article:modified_time" content="2024-03-03T07:53:43.286Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>第二章机器数及其特点 - Hexo</title>
+  <title>第一章最优化简介 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="第二章机器数及其特点"></span>
+            <span id="subtitle" data-typed-text="第一章最优化简介"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-30 14:24" pubdate>
-          December 30, 2023 pm
+        <time datetime="2024-03-03 15:10" pubdate>
+          March 3, 2024 pm
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          895 words
+          218 words
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          8 mins
+          2 mins
         
       </span>
     
@@ -267,64 +267,28 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">第二章机器数及其特点</h1>
+            <h1 id="seo-header">第一章最优化简介</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="2-1机器数及特点"><a href="#2-1机器数及特点" class="headerlink" title="2.1机器数及特点"></a>2.1机器数及特点</h2><ul>
-<li>三种常见的机器数：原码，补码，反码<ul>
-<li>负数反码表示时，符号位不变，</li>
-<li>原码：表示简单，运算复杂（符号位不参与运算，要设置加法，减法器），零的表示不唯一</li>
-<li>反码：表示复杂，运算相对原码简单（符号位参与运算，只需设置加法器，但<code>符号位的进位需加到最低为</code>），零的表示不唯一</li>
-<li>补码：表示相对原码复杂，运算简单，零表示唯一</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-2定点与浮点数据表示"><a href="#2-2定点与浮点数据表示" class="headerlink" title="2.2定点与浮点数据表示"></a>2.2定点与浮点数据表示</h2><ul>
-<li>定点数：表示范围受到字长的限制</li>
-<li>浮点数：把数的范围和精度分别进行表示</li>
-<li>IEEE754格式<ul>
-<li>单精度（32位）：阶码8位，尾数24位（内含1位符号位）</li>
-<li>双精度（64位）：阶码11位，尾数53位（内含1位符号位）</li>
-<li>阶码采用移码（单精度127，双精度1023），尾数采用原码</li>
-<li>尾数形式：1.XXXXXX，其中尾数部分保存.XXXXXX（1被隐藏）</li>
-<li>表示的数据<ol>
-<li>E&#x3D;0,M&#x3D;0：表示机器零</li>
-<li>E&#x3D;0,M!&#x3D;0：非规格化浮点数</li>
-<li>1 &lt;&#x3D; E &lt;&#x3D; 254：规格化的浮点数</li>
-<li>E&#x3D;255,M&#x3D;0：无穷大的数</li>
-<li>E&#x3D;255,M!&#x3D;0：表示一个非数值</li>
+                <h2 id="1-1最优化问题概括"><a href="#1-1最优化问题概括" class="headerlink" title="1.1最优化问题概括"></a>1.1最优化问题概括</h2><ol>
+<li>最优化问题的一般形式</li>
+<li>最优化问题的类型与应用背景<ul>
+<li>按目标函数、约束函数以及解的性质分类<ol>
+<li>线性规划：目标函数和约束函数均为线性函数</li>
+<li>非线性规划：目标函数和约束函数至少有一个微非线性函数</li>
+<li>二次规划：目标函数是二次函数而约束函数是线性函数</li>
+<li>非光滑优化：包含非光滑函数的问题</li>
+<li>无导数优化：不能直接求导数的问题</li>
+<li>整数优化：变量只能取整数的问题</li>
+<li>半定规划（广义形式为锥规划）：在线性约束下极小化关于半正定矩阵的线性函数的问题</li>
 </ol>
 </li>
 </ul>
 </li>
-</ul>
-<h2 id="2-3数据校验的基本原理"><a href="#2-3数据校验的基本原理" class="headerlink" title="2.3数据校验的基本原理"></a>2.3数据校验的基本原理</h2><ul>
-<li>为什么要检验：数据在被处理，传输，存储过程中可能出现错误</li>
-<li>校验的基本原理<ul>
-<li>增加冗余码（校验位）</li>
-<li>码距：同一编码中，任意两个合法编码之间不同二进制位数的<code>最小值</code>，校验码中增加冗余项的目的就是为了增大码距</li>
-<li>码距与检错和纠错能力的关系：<ol>
-<li>码距&gt;&#x3D;e + 1;可检错e个错误</li>
-<li>码距&gt;&#x3D;2t + 1;可纠正t个错误</li>
-<li>码距&gt;&#x3D;e + t + 1; (e &gt;&#x3D; t)可纠正t个错误，同时检测e个错误</li>
 </ol>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-4奇偶校验"><a href="#2-4奇偶校验" class="headerlink" title="2.4奇偶校验"></a>2.4奇偶校验</h2><ul>
-<li>奇偶校验基本原理：增加冗余码，根据有效信息计算校验信息位，使校验码（数据+1位校验信息）中1的个数满足奇&#x2F;偶校验的要求。</li>
-<li>奇偶校验特点：编码与检错简单，编码效率高，<code>不能检测偶数位错误</code>，不具有纠错能力</li>
-<li>改进的奇偶校验：双向奇偶校验，方块校验，垂直水平校验</li>
-<li>哪些场合使用奇偶校验；</li>
-</ul>
-<h2 id="2-5CRC校验及其实现"><a href="#2-5CRC校验及其实现" class="headerlink" title="2.5CRC校验及其实现"></a>2.5CRC校验及其实现</h2><ul>
-<li>有效信息（k位）校验信息（r位）：N &#x3D; k + r &lt;&#x3D; 2 ^ r - 1</li>
-<li>生成多项式</li>
-</ul>
-
+<h2 id="1-5最优化的基本概念"><a href="#1-5最优化的基本概念" class="headerlink" title="1.5最优化的基本概念"></a>1.5最优化的基本概念</h2>
                 
               </div>
             
@@ -342,7 +306,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" class="category-chain-item">计算机组成原理</a>
+  <a href="/categories/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/" class="category-chain-item">最优化理论</a>
   
   
 
@@ -362,8 +326,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>第二章机器数及其特点</div>
-      <div>http://example.com/2023/12/30/第二章计算机的逻辑部件/</div>
+      <div>第一章最优化简介</div>
+      <div>http://example.com/2024/03/03/最优化理论第一章最优化简介/</div>
     </div>
     <div class="license-meta">
       
@@ -375,7 +339,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>December 30, 2023</div>
+          <div>March 3, 2024</div>
         </div>
       
       
@@ -407,9 +371,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/02/21/%E4%BA%86%E4%B8%8D%E8%B5%B7%E7%9A%84%E4%BF%AE%E4%BB%99%E6%A8%A1%E6%8B%9F%E5%99%A8/" title="了不起的修仙模拟器">
+                      <a href="/2024/03/03/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%AA%E8%AE%BA/" title="第一章绪论">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">了不起的修仙模拟器</span>
+                        <span class="hidden-mobile">第一章绪论</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -417,8 +381,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/29/%E7%AC%AC%E4%B8%80%E7%AB%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/" title="第一章计算机系统概论">
-                        <span class="hidden-mobile">第一章计算机系统概论</span>
+                      <a href="/2024/02/21/%E4%BA%86%E4%B8%8D%E8%B5%B7%E7%9A%84%E4%BF%AE%E4%BB%99%E6%A8%A1%E6%8B%9F%E5%99%A8/" title="了不起的修仙模拟器">
+                        <span class="hidden-mobile">了不起的修仙模拟器</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
